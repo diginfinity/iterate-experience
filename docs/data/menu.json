@@ -1,0 +1,21 @@
+{
+    "documentation": [
+        {
+            "category": "Installation",
+            "pages": [
+                "documentation/start"
+            ]
+        },
+        {
+            "category": "UI components",
+            "pages": [
+                {
+                    "category": "Form controls",
+                    "pages": [
+                        "documentation/input"
+                    ]
+                }
+            ]
+        }
+    ]
+}

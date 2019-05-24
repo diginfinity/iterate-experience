@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ETInput render correctly 1`] = `
+<div class="et-control is-clearfix"><input type="text" autocomplete="on" class="et-input">
+    <!---->
+    <!---->
+    <!---->
+</div>
+`;

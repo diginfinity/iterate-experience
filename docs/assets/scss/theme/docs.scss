@@ -1,0 +1,338 @@
+/* HTML
+ ========================================================================== */
+
+/*
+ * Force vertical scrollbar
+ * 1. `overflow-x` has to be on the `body` element for Safari to prevent horizontal scrolling on touch
+      This causes a random bug showing a vertical scrollbar in combination with some fonts like `Poppins`
+      This is why `overflow-y` must also be set to `hidden`
+ */
+
+html { overflow-y: scroll; }
+
+/* 1 */
+body { overflow: hidden; }
+
+
+/* Documentation Sidebars
+ ========================================================================== */
+
+/*
+ * Sidebar Left
+ */
+.et-sidebar-left {
+    position: fixed;
+    top: $navbar-nav-item-height;
+    bottom: 0;
+    background: white;
+    box-sizing: border-box;
+    width: $sidebar-left-width !important;
+    padding: 40px 40px 60px 40px;
+    border-right: 1px $global-border solid;
+    overflow: auto;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+
+    .et-sidebar-left + .et-main { padding-left: $sidebar-left-width; }
+
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+
+    .et-sidebar-left + .et-main { padding-left: $sidebar-left-width - ($sidebar-right-width + $sidebar-right-left); }
+
+}
+
+/* Large screen and bigger */
+@media (min-width: 1400px) {
+
+    .et-sidebar-left {
+        width: $sidebar-left-width-xl !important;
+        padding: 45px 45px 60px 45px;
+    }
+    .et-sidebar-left + .et-main { padding-left: $sidebar-left-width-xl - ($sidebar-right-width + $sidebar-right-left-xl); }
+}
+
+
+/* UIkit modifier
+ ========================================================================== */
+
+/*
+ * Navbar
+ */
+
+.et-navbar-container:not(.uk-navbar-transparent) {
+    background: linear-gradient(to left, #28a5f5, $global-primary-background) !important;
+}
+
+.et-navbar-container .uk-navbar-nav > li > a,
+.et-navbar-container .uk-navbar-item:not(.uk-logo),
+.et-navbar-container .uk-navbar-toggle {
+    height: 70px;
+    font-size: 13px;
+}
+
+// Color Mode
+.et-navbar-container:not(.uk-navbar-transparent):extend(.uk-light all) {}
+
+
+
+.et-navbar-container .uk-navbar-nav > li > a {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: $navbar-nav-item-line-margin-horizontal;
+        right: calc(102% - #{$navbar-nav-item-line-margin-horizontal});
+        bottom: $navbar-nav-item-line-margin-vertical;
+        height: $navbar-nav-item-line-height;
+        background-color: $navbar-nav-item-line-background;
+        transition: $navbar-nav-item-line-transition-duration ease-in-out;
+        transition-property: right;
+    }
+}
+
+.et-navbar-container .uk-navbar-nav > li > a:hover::before { right: $navbar-nav-item-line-margin-horizontal; }
+
+
+
+/*
+ * Nav
+ */
+
+.et-nav > li.uk-active > a { position: relative; }
+
+.et-nav > li.uk-active > a:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -25px;
+    width: 15px;
+    border-top: 1px solid $global-primary-background;
+}
+
+.et-nav .uk-nav-header {
+    padding: 8px 0;
+    border-bottom: 1px solid $global-border;
+}
+
+/*
+ * Subnav
+ */
+
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+
+    .et-subnav { margin-left: -50px; }
+    .et-subnav > * { padding-left: 50px; }
+
+}
+
+.et-subnav > * > :first-child { text-transform: capitalize; }
+
+
+/*
+ * Label (Changelog()
+ */
+
+.et-label-changelog {
+    width: 90px;
+    margin-top: 3px;
+}
+
+/*
+ * Button
+ */
+
+.et-button-default,
+.et-button-primary { border-radius: 500px; }
+
+.et-button-default {}
+
+.et-button-large { line-height: 48px; }
+
+.et-button-primary {}
+
+
+/*
+ * Section
+ */
+
+.et-section-primary {
+    background: linear-gradient(to left top, #28a5f5, $global-primary-background) 0 0 no-repeat;
+}
+
+.et-section-texture {
+    background: url(./assets/img/section-background.svg) 50% 17vh no-repeat, linear-gradient(to left top, #28a5f5, #1e87f0) 0 0 no-repeat;
+}
+
+.et-section-intro {
+    background: linear-gradient(to left top, #28a5f5, $global-primary-background) 0 0 no-repeat,
+    #fff;
+    background-size: 100% 75%;
+}
+
+
+/*
+ * Heading
+ */
+
+.et-h4,
+.et-h5,
+.et-h6 {
+    font-family: Montserrat;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $global-muted-color;
+}
+
+.et-h4 { font-size: 14px; }
+.et-h5 { font-size: 12px; }
+.et-h6 { font-size: 11px; }
+
+
+
+/*
+ * Text
+ */
+
+.et-text-large { font-size: 18px; }
+
+/*
+ * Box shadow
+ */
+
+.et-box-shadow-medium {
+    box-shadow: 2px 12px 35px rgba(0,0,0,0.1),
+    0 1px 6px rgba(0,0,0,0.05);
+}
+
+.et-box-shadow-large {
+    box-shadow: -40px 40px 160px 0 rgba(0,0,0,0.08),
+    -8px 8px 15px 0 rgba(120,120,120,0.04),
+    3px 3px 30px 0 rgba(0,0,0,0.04);
+}
+
+.et-box-shadow-modal { box-shadow: 3px 3px 40px 0 rgba(0,0,0,0.06); }
+
+/*
+ * Overlay
+ */
+
+.et-overlay-default { background: fade($global-background, 50%); }
+
+/*
+ * Modal
+ */
+
+.et-modal-dialog { background: $global-muted-background; }
+
+.et-modal-header { padding: 20px 30px; }
+.et-modal-body { padding: 0; }
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+
+    .et-modal-header { padding: 25px 50px; }
+    .et-modal-body { padding: 0 50px; }
+
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-xlarge) {
+
+    .et-modal-header { padding: 50px 120px; }
+    .et-modal-body { padding: 0 120px; }
+
+}
+
+.et-modal-close-full {
+    background: transparent;
+    padding: 30px;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+
+    .et-modal-close-full { padding: $global-medium-margin; }
+
+}
+
+/* Utilities
+ ========================================================================== */
+
+/*
+ * Heading fragment
+ */
+
+.et-heading-fragment > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+
+    h2.et-heading-fragment > a:before {
+        content: "#";
+        position: absolute;
+        width: 25px;
+        margin-left: -25px;
+        color: $global-muted-color;
+    }
+
+}
+
+
+/* Reset container for docs
+ ========================================================================== */
+
+.et-main .uk-container {
+    padding-left: $container-padding-horizontal;
+    padding-right: $container-padding-horizontal;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+
+    .et-main .uk-container {
+        padding-left: $container-padding-horizontal-s;
+        padding-right: $container-padding-horizontal-s;
+    }
+
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+
+    .et-main .uk-container {
+        padding-left: $container-padding-horizontal-m;
+        padding-right: $container-padding-horizontal-m;
+    }
+
+}
+
+
+/* Pro
+ ========================================================================== */
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+
+    .et-intro-text { margin-top: 30px; }
+
+}
+
+/* Large screen and bigger */
+@media (min-width: $breakpoint-xlarge) {
+
+    .et-intro-text { margin-top: 90px; }
+    .et-intro-image { margin-right: -75px; }
+
+}

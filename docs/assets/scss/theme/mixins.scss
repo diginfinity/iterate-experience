@@ -1,0 +1,10 @@
+@mixin hook-base-body() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+@mixin hook-tab-item() { line-height: 20px; }
+
+@mixin hook-text-lead() { font-weight: 300; }
+@mixin hook-text-large() { font-weight: 300; }
+

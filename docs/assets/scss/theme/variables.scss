@@ -1,0 +1,125 @@
+// UIkit
+// ========================================================================
+
+$global-font-size:                              15px;
+
+$global-xxlarge-font-size:                      38px;
+$global-xlarge-font-size:                       30px;
+$global-large-font-size:                        24px;
+$global-medium-font-size:                       20px;
+$global-small-font-size:                        14px;
+
+$global-emphasis-color:                         #222;
+
+//
+// Base
+//
+
+$base-code-font-family:                         'Roboto Mono', monospace;
+$base-code-font-size:                           12px;
+
+$base-heading-font-weight:                      300;
+
+$base-pre-font-size:                            12px;
+$base-pre-padding:                              25px;
+$base-pre-background:                           $global-muted-background;
+$base-pre-border-width:                         0;
+$base-pre-border-radius:                        0;
+
+
+
+//
+// Container
+//
+
+$container-max-width:                           1380px;
+$container-small-max-width:                     700px;
+
+
+//
+// Navbar
+//
+
+$inverse-navbar-nav-item-color:                $inverse-global-color;
+$inverse-navbar-nav-item-hover-color:          $inverse-global-emphasis-color;
+
+//
+// Nav
+//
+
+$nav-header-font-size:                          12px;
+
+//
+// Subnav
+//
+//
+$inverse-subnav-item-color:                     $inverse-global-color;
+$inverse-subnav-item-hover-color:               $inverse-global-emphasis-color;
+
+//
+// Tab
+//
+
+$tab-item-padding-horizontal:                   20px;
+$tab-item-padding-vertical:                     9px;
+$tab-item-border-width:                         2px;
+$tab-item-font-size:                            12px;
+
+
+
+//
+// Table
+//
+
+$table-header-cell-font-size:                   12px;
+
+
+//
+// Label
+//
+
+$label-font-size:                               12px;
+
+//
+// Text
+//
+
+
+//
+// Utility
+//
+
+$inverse-logo-color:                           $inverse-global-emphasis-color;
+$inverse-logo-hover-color:                     $inverse-global-emphasis-color;
+
+//
+// Off-canvas
+//
+
+$offcanvas-bar-background:                      #fff;
+$offcanvas-bar-color-mode:                      dark;
+
+//
+// Inverse
+//
+
+$inverse-global-color:                          lighten($global-inverse-color, 80%);
+$inverse-global-muted-color:                    lighten($global-inverse-color, 60%);
+
+/* ========================================================================
+   Theme
+ ========================================================================== */
+
+$sidebar-left-width:     240px;
+$sidebar-left-width-xl:  300px;
+
+$sidebar-right-width:    200px;
+$sidebar-right-left:     0px;
+$sidebar-right-left-xl:  60px;
+
+// Line Mode
+$navbar-nav-item-line-margin-vertical:          20px;
+$navbar-nav-item-line-margin-horizontal:        $navbar-nav-item-padding-horizontal;
+$navbar-nav-item-line-height:                   1px;
+$navbar-nav-item-line-background:               currentColor;
+$navbar-nav-item-line-transition-duration:      0.3s;

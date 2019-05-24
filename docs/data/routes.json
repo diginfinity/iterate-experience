@@ -1,0 +1,43 @@
+{
+    "/": {
+        "title": "ET Experience",
+        "subtitle": "ET Experience SDK.",
+        "breadTitle": "Home",
+        "path": "/"
+    },
+    "documentation": {
+        "title": "Documentation",
+        "subtitle": "Learn everything you need to start using ET Experience SDK",
+        "path": "/documentation",
+        "githubPath": "pages/Documentation.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation"
+        ]
+    },
+    "documentation/start": {
+        "title": "Start",
+        "subtitle": "<strong>Three ways</strong> to install and use ET Experience",
+        "path": "/documentation/start",
+        "githubPath": "pages/installation/Start.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/start"
+        ]
+    },
+    "documentation/input": {
+        "title": "Input",
+        "subtitle": "Get user Input. Use with <strong>Field</strong> to access all functionalities",
+        "path": "/documentation/input",
+        "githubPath": "pages/components/input/Input.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/input"
+        ]
+    }
+}
