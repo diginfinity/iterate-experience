@@ -1,6 +1,14 @@
 <template>
     <section>
-        <et-input v-model="name" name="first_name"></et-input>
+        <!-- <et-input v-model="name" name="first_name"></et-input> -->
+        <et-form> <!-- for testing -->
+            <et-page>
+                <et-input v-model="name" name="first_name"></et-input>
+            </et-page>
+            <et-page>
+                <et-input v-model="last_name" name="last_name"></et-input>
+            </et-page>
+        </et-form>
     </section>
 </template>
 
@@ -8,7 +16,8 @@
     export default {
         data() {
             return {
-                name: 'John Silver'
+                name: 'John Silver',
+                last_name: ''
             }
         }
     }
