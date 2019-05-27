@@ -28,6 +28,18 @@
             "documentation/start"
         ]
     },
+    "documentation/customization": {
+        "title": "Customization",
+        "subtitle": "<strong>Three ways</strong> to install and use ET Experience",
+        "path": "/documentation/customization",
+        "githubPath": "pages/installation/Customization.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/customization"
+        ]
+    },
     "documentation/input": {
         "title": "Input",
         "subtitle": "Get user Input. Use with <strong>Field</strong> to access all functionalities",

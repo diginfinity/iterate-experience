@@ -1,6 +1,6 @@
 <template>
     <section class="api-view">
-        <h2 class="title is-4">API</h2>
+        <h2 class="uk-h4">API</h2>
         <template v-for="component in data">
             <div :key="component.title">
                 <h3

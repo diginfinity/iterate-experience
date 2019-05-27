@@ -3,7 +3,8 @@
         {
             "category": "Installation",
             "pages": [
-                "documentation/start"
+                "documentation/start",
+                "documentation/customization"
             ]
         },
         {

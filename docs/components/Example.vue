@@ -1,25 +1,20 @@
 <template>
-    <section class="example-section">
-        <p class="title is-4">{{ title }}</p>
-        <div class="content">
-            <slot/>
-        </div>
-
-        <div
-            v-if="code && component"
-            class="example"
-            :class="{ 'is-vertical': vertical }">
-            <div class="button-container">
-                <!-- for codepen edit -->
+    <section class="example-section uk-margin">
+        <p class="uk-h4">{{ title }}</p>
+        <slot/>
+        <div uk-margin v-if="code && component">
+            <div class="uk-padding" style="border: 1px #e5e5e5 solid">
+                <div class="example-component" :class="{ 'is-paddingless': paddingless }">
+                    <component :is="component"/>
+                </div>
             </div>
-            <div class="example-component" :class="{ 'is-paddingless': paddingless }">
-                <component :is="component"/>
+            <div>
+                <CodeView
+                    :code="code"
+                    bordered
+                    codepen
+                />
             </div>
-            <CodeView
-                :code="code"
-                bordered
-                codepen
-            />
         </div>
         <hr class="is-medium">
     </section>

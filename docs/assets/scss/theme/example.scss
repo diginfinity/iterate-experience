@@ -1,0 +1,82 @@
+.example {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $global-warning-background;
+    color: rgba(0, 0, 0, 0.7);
+    .button-container {
+        position: absolute;
+        display: inline-flex;
+        background: $global-warning-background;
+        bottom: 100%;
+        right: -1px;
+        padding: 0 0 0 8px;
+        vertical-align: top;
+        .button {
+            display: flex;
+            align-items: flex-end;
+            font-size: 11px;
+            padding: 0;
+            text-decoration: none;
+            &:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+            .icon {
+                margin-left: 0 !important;
+            }
+            &:hover,
+            &:focus {
+                color: $global-primary-background;
+                background: transparent;
+            }
+        }
+    }
+    &:not(:first-child) {
+        margin-top: 2rem;
+    }
+    &:not(:last-child) {
+        margin-bottom: 1.5rem
+    }
+    &:before {
+        background: $global-warning-background;
+        bottom: 100%;
+        content: "Example";
+        display: inline-block;
+        font-size: 8px;
+        font-weight: bold;
+        left: -1px;
+        padding: 4px 8px;
+        position: absolute;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+    .example-component {
+        padding: 1.5rem;
+    }
+    .codeview {
+        border-top: 1px solid $global-warning-background;
+    }
+    &.is-vertical {
+        flex-direction: row;
+        .example-component,
+        .codeview {
+            width: 50%;
+        }
+        .codeview {
+            display: flex;
+            flex-direction: column;
+            border-top: 0;
+            border-left: 1px solid $global-warning-background;
+        }
+        .codeview,
+        .highlight,
+        pre,
+        code {
+            flex-grow: 1;
+        }
+    }
+}
+
+hr.is-medium {
+    margin: 3rem 0;
+}
