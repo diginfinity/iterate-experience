@@ -1,6 +1,6 @@
 <template>
     <section>
-        <et-input v-model="name"></et-input>
+        <et-input v-model="name" name="first_name"></et-input>
     </section>
 </template>
 

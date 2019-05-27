@@ -87,3 +87,21 @@ export function escapeRegExpChars(value) {
     // eslint-disable-next-line
     return value.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&')
 }
+
+export function getFocusedElementId() {
+    return document.activeElement.id
+}
+
+export function getFocusedTabIndex(tabs = []) {
+    let activeId = getFocusedElementId()
+    return tabs.findIndex((tab) => tab.tabId === activeId)
+}
+
+export function findElementAndFocus(elemId) {
+    let elem = document.getElementById(elemId)
+    elem.focus()
+}
+
+export function isPromise(func) {
+    return func.then && typeof func.then === 'function'
+}
