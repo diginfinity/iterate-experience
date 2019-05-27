@@ -1,5 +1,5 @@
 <template>
-    <div class="control">
+    <div class="et-control">
         <label
             class="et-radio radio"
             ref="label"
@@ -22,8 +22,10 @@
 </template>
 
 <script>
+    import RequiredProps from '../../utils/RequiredProps'
     export default {
         name: 'EtRadio',
+        mixins: [RequiredProps],
         props: {
             value: [String, Number, Boolean, Function, Object, Array, Symbol],
             nativeValue: [String, Number, Boolean, Function, Object, Array, Symbol],
@@ -33,7 +35,6 @@
             },
             disabled: Boolean,
             required: Boolean,
-            name: String,
             size: String
         },
         data() {

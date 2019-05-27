@@ -1,7 +1,7 @@
 <template>
     <section>
         <et-field label="Name">
-            <et-input v-model="name"></et-input>
+            <et-input v-model="name" name="first_name_personal"></et-input>
         </et-field>
 
         <et-field label="Email"
@@ -9,6 +9,7 @@
                  message="This email is invalid">
             <et-input type="email"
                      value="john@"
+                     name="email_business"
                      maxlength="30">
             </et-input>
         </et-field>
@@ -16,11 +17,12 @@
         <et-field label="Username"
                  type="et-is-success"
                  message="This username is available">
-            <et-input value="johnsilver" maxlength="30"></et-input>
+            <et-input value="johnsilver" maxlength="30" name="last_name_personal"></et-input>
         </et-field>
 
         <et-field label="Password">
             <et-input type="password"
+                     name="password_other"
                      value="iwantmytreasure"
                      password-reveal>
             </et-input>

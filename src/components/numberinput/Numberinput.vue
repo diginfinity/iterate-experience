@@ -1,9 +1,9 @@
 <template>
-    <div class="et-numberinput field" :class="fieldClasses">
+    <div class="et-numberinput et-field" :class="fieldClasses">
         <p class="control">
             <button
                 type="button"
-                class="button"
+                class="et-button"
                 :class="buttonClasses"
                 :disabled="disabled || disabledMin"
                 @mousedown="onStartLongPress($event, false)"
@@ -40,10 +40,10 @@
             @focus="$emit('focus', $event)"
             @blur="$emit('blur', $event)" />
 
-        <p class="control">
+        <p class="et-control">
             <button
                 type="button"
-                class="button"
+                class="et-button"
                 :class="buttonClasses"
                 :disabled="disabled || disabledMax"
                 @mousedown="onStartLongPress($event, true)"
@@ -83,7 +83,7 @@ export default {
         disabled: Boolean,
         type: {
             type: String,
-            default: 'is-primary'
+            default: 'et-is-primary'
         },
         editable: {
             type: Boolean,
@@ -119,15 +119,15 @@ export default {
         },
         fieldClasses() {
             return [
-                { 'has-addons': this.controlsPosition === 'compact' },
-                { 'is-grouped': this.controlsPosition !== 'compact' }
+                { 'et-has-addons': this.controlsPosition === 'compact' },
+                { 'et-is-grouped': this.controlsPosition !== 'compact' }
             ]
         },
         buttonClasses() {
             return [
                 this.type,
                 this.size,
-                { 'is-rounded': this.controlsRounded }
+                { 'et-is-rounded': this.controlsRounded }
             ]
         },
         minNumber() {

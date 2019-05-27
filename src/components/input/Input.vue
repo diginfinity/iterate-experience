@@ -1,6 +1,7 @@
 <template>
     <div class="et-control" :class="rootClasses">
         <input
+            :name="name"
             v-if="type !== 'textarea'"
             ref="input"
             class="et-input"
@@ -15,6 +16,7 @@
             @focus="onFocus">
 
         <textarea
+            :name="name"
             v-else
             ref="textarea"
             class="et-textarea"
@@ -57,12 +59,14 @@
     import Icon from '../icon/Icon'
     import config from '../../utils/config'
     import FormElementMixin from '../../utils/FormElementMixin'
+    import RequiredProps from '../../utils/RequiredProps'
+
     export default {
         name: 'EtInput',
         components: {
             [Icon.name]: Icon
         },
-        mixins: [FormElementMixin],
+        mixins: [FormElementMixin, RequiredProps],
         inheritAttrs: false,
         props: {
             value: [Number, String],
