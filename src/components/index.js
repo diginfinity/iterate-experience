@@ -4,6 +4,7 @@ import Page from './page'
 import Form from './form'
 import Numberinput from './numberinput'
 import Select from './select'
+import Radio from './Radio'
 
 export {
     Icon,
@@ -11,5 +12,6 @@ export {
     Page,
     Form,
     Numberinput,
-    Select
+    Select,
+    Radio
 }
