@@ -27,6 +27,14 @@
                      password-reveal>
             </et-input>
         </et-field>
+
+        <et-field label="Select option">
+            <et-select placeholder="Select a character">
+                <option value="flint">Flint</option>
+                <option value="silver">Silver</option>
+            </et-select>
+        </et-field>
+
     </section>
 </template>
 

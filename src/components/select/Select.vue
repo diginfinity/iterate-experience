@@ -1,34 +1,29 @@
 <template>
     <div
-        v-show="active"
         class="et-select"
-        :class="{'is-expanded': expanded, 'has-icon': icon}"
-        role="tabpanel"
-        :id="tabId"
-        :aria-hidden="!active"
-        :aria-labelledby="`et-step-${tabId}`">
-        <span class="et-select" :class="spanClasses">
-            <select
-                v-model="computedValue"
-                ref="select"
-                :multiple="multiple"
-                v-bind="$attrs"
-                @blur="$emit('blur', $event)"
-                @focus="$emit('focus',$event)">
+        :class="{'et-has-icon': icon}">
+        <!-- <span class="et-select" :class="spanClasses"> -->
+        <select
+            v-model="computedValue"
+            ref="select"
+            :multiple="multiple"
+            v-bind="$attrs"
+            @blur="$emit('blur', $event)"
+            @focus="$emit('focus',$event)">
 
-                <template v-if="placeholder">
-                    <option
-                        v-if="computedValue == null"
-                        :value="null"
-                        disabled
-                        hidden>
-                        {{ placeholder }}
-                    </option>
-                </template>
-                <slot :active="active"/>
+            <template v-if="placeholder">
+                <option
+                    v-if="computedValue == null"
+                    :value="null"
+                    disabled
+                    hidden>
+                    {{ placeholder }}
+                </option>
+            </template>
+            <slot/>
 
-            </select>
-        </span>
+        </select>
+        <!-- </span> -->
         <et-icon
             v-if="icon"
             class="is-left"
@@ -40,55 +35,47 @@
 
 <script>
     import Icon from '../icon/Icon'
+    import FormElementMixin from '../../utils/FormElementMixin'
+
     export default{
         name: 'EtSelect',
         components: {
             [Icon.name]: Icon
         },
+        mixins: [FormElementMixin],
+        inheritAttrs: false,
         props: {
-            title: {
-                type: String,
-                default: ''
+            value: {
+                type: [String, Number, Boolean, Object, Array, Symbol, Function],
+                default: null
             },
-            /***
-             * Function to execute before tab switch. Return value must be boolean
-             * If the return result is false, tab switch is restricted
-             */
-            beforeChange: {
-                type: Function
-            },
-            /***
-             * Function to execute after tab switch. Return void for now.
-             * Safe to assume necessary validation has already occured
-             */
-            afterChange: {
-                type: Function
-            },
-            route: {
-                type: [String, Object]
-            },
-            additionalInfo: {
-                type: Object,
-                default: () => {}
-            }
+            placeholder: String,
+            multiple: Boolean
         },
-        inject: ['addTab', 'removeTab'],
         data() {
             return {
-                active: false,
-                validationError: null,
-                checked: false,
-                tabId: ''
+                selected: this.value,
+                _elementRef: 'select'
             }
         },
-        mounted() {
-            this.addTab(this)
-        },
-        destroyed() {
-            if (this.$el && this.$el.parentNode) {
-                this.$el.parentNode.removeChild(this.$el)
+        computed: {
+            computedValue: {
+                get() {
+                    return this.selected
+                },
+                set(value) {
+                    this.selected = value
+                    this.$emit('input', value)
+                    !this.isValid && this.checkHtml5Validity()
+                }
             }
-            this.removeTab(this)
+        },
+        watch: {
+            value(value) {
+                this.selected = value
+                !this.isValid && this.checkHtml5Validity()
+            }
         }
+
     }
 </script>
