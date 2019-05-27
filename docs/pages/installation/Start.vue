@@ -35,8 +35,8 @@
 
         <h4 class="uk-text-bold">Usage</h4>
         <CodeView title="Full bundle (recommended)" :code="importingBundle | pre" lang="javascript" expanded/>
-        <CodeView title="Individual components as Vue plugins" :code="importingComponentsAsVuePlugins | pre" lang="javascript" expanded/>
-        <CodeView title="Individual components" :code="importingComponents | pre" lang="javascript" expanded/>
+        <!-- <CodeView title="Individual components as Vue plugins" :code="importingComponentsAsVuePlugins | pre" lang="javascript" expanded/>
+        <CodeView title="Individual components" :code="importingComponents | pre" lang="javascript" expanded/> -->
 
         <hr>
 
