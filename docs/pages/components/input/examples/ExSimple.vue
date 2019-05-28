@@ -28,12 +28,14 @@
             </et-input>
         </et-field>
 
-        <et-field label="Select option">
-            <et-select placeholder="Select a character">
-                <option value="flint">Flint</option>
-                <option value="silver">Silver</option>
-            </et-select>
-        </et-field>
+        <et-form>
+            <et-page>
+                First name
+                <et-input type="text" v-model="first_name" name="first_name_personal"></et-input>
+                Last name
+                <et-input type="text" v-model="last_name" name="last_name_personal"></et-input>
+            </et-page>
+        </et-form>
 
     </section>
 </template>

@@ -32,6 +32,7 @@ const router = new Router({
                 route('documentation', 'Documentation'),
                 route('documentation/start', 'installation/Start'),
                 route('documentation/customization', 'installation/Customization'),
+                route('documentation/usage', 'installation/Usage'),
                 route('documentation/input', 'components/input/Input')
             ]
         },
