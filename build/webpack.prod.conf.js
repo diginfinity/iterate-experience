@@ -64,9 +64,9 @@ var webpackConfig = merge(baseWebpackConfig, {
         // see https://github.com/ampedandwired/html-webpack-plugin
         new HtmlWebpackPlugin({
             filename: process.env.NODE_ENV === 'testing'
-                ? 'Radio.vue.html'
+                ? 'index.html'
                 : config.build.index,
-            template: 'Radio.vue.html',
+            template: 'index.html',
             inject: process.env.NODE_ENV === 'testing'
                 ? true
                 : 'head',
