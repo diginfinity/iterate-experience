@@ -32,7 +32,7 @@ const router = new Router({
                 route('documentation', 'Documentation'),
                 route('documentation/start', 'installation/Start'),
                 route('documentation/customization', 'installation/Customization'),
-                route('documentation/usage', 'installation/Usage'),
+                route('documentation/usage', 'installation/usage/Usage'),
                 route('documentation/personal', 'predefined/Personal'),
                 route('documentation/business', 'predefined/Business'),
                 route('documentation/contact', 'predefined/Contact'),
