@@ -28,7 +28,7 @@
         <h3>Disabled</h3>
         <div class="et-field">
             <et-switch
-                       disabled>
+                disabled>
             </et-switch>
         </div>
     </section>

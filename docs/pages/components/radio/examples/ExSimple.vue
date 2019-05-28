@@ -25,17 +25,12 @@
 
             </et-radio>
         </et-field>
-        <Select/>
     </section>
 </template>
 
 <script>
-    import Select from '!!raw-loader!../select/index';
 
     export default {
-        components: {
-            Select
-        },
         data() {
             return {
                 radio: 'Silver',

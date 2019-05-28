@@ -38,13 +38,12 @@ const router = new Router({
                 route('documentation/contact', 'predefined/Contact'),
                 route('documentation/other', 'predefined/Other'),
                 route('documentation/input', 'components/input/Input'),
-                route('documentation/input', 'components/input/Input'),
                 route('documentation/checkbox', 'components/checkbox'),
                 route('documentation/field', 'components/field'),
                 route('documentation/numberinput', 'components/numberinput'),
-                route('documentation/radio', 'components/radio'),
-                route('documentation/select', 'components/select'),
-                route('documentation/switch', 'components/switch')
+                route('documentation/radio', 'components/radio/Radio'),
+                route('documentation/select', 'components/select/Select'),
+                route('documentation/switch', 'components/switch/Switch')
             ]
         },
         // Global redirect
