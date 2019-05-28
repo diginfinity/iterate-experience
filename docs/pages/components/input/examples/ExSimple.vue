@@ -32,7 +32,6 @@
 </template>
 
 <script>
-    import EtCheckbox from "../../../../../src/components/checkbox/Checkbox";
     export default {
         components: {EtCheckbox},
         data() {

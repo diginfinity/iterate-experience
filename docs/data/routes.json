@@ -40,6 +40,18 @@
             "documentation/customization"
         ]
     },
+    "documentation/usage": {
+        "title": "Usage",
+        "subtitle": "<strong>Usage</strong> and how to ET Experience",
+        "path": "/documentation/usage",
+        "githubPath": "pages/installation/Usage.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/usage"
+        ]
+    },
     "documentation/input": {
         "title": "Input",
         "subtitle": "Get user Input. Use with <strong>Field</strong> to access all functionalities",
