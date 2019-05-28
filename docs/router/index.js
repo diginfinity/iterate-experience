@@ -33,7 +33,13 @@ const router = new Router({
                 route('documentation/start', 'installation/Start'),
                 route('documentation/customization', 'installation/Customization'),
                 route('documentation/usage', 'installation/Usage'),
-                route('documentation/input', 'components/input/Input')
+                route('documentation/input', 'components/input/Input'),
+                route('documentation/checkbox', 'components/checkbox'),
+                route('documentation/field', 'components/field'),
+                route('documentation/numberinput', 'components/numberinput'),
+                route('documentation/radio', 'components/radio'),
+                route('documentation/select', 'components/select'),
+                route('documentation/switch', 'components/switch')
             ]
         },
         // Global redirect
