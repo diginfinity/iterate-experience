@@ -33,6 +33,7 @@
                 type: String,
                 default: 'radio'
             },
+            name: String,
             disabled: Boolean,
             required: Boolean,
             size: String
