@@ -28,11 +28,8 @@
             :step="newStep"
             :max="max"
             :min="min"
-            :size="size"
             :disabled="disabled"
             :readonly="!editable"
-            :loading="loading"
-            :rounded="rounded"
             :icon="icon"
             :icon-pack="iconPack"
             :autocomplete="autocomplete"
@@ -88,10 +85,6 @@ export default {
         editable: {
             type: Boolean,
             default: true
-        },
-        controlsRounded: {
-            type: Boolean,
-            default: false
         },
         controlsPosition: String
     },
@@ -158,10 +151,6 @@ export default {
         }
     },
     watch: {
-        /**
-         * When v-model is changed:
-         *   1. Set internal value.
-         */
         value(value) {
             this.newValue = value
         }
