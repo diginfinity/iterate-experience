@@ -42,9 +42,16 @@
         <div class="et-footer et-clearfix">
             <slot name="footer" v-bind="slotProps">
                 <div class="et-footer-left" v-if="displayPrevButton">
-                    <slot name="prev" v-bind="slotProps">
+                    <!-- <slot name="prev" v-bind="slotProps">
                         {{ backButtonText }}
-                    </slot>
+                    </slot> -->
+                    <span
+                        @click="prevTab"
+                        @keyup.enter="prevTab"
+                        role="button"
+                        tabindex="0">
+                        {{ backButtonText }}
+                    </span>
                 </div>
 
                 <div class="et-footer-right">
