@@ -14,7 +14,13 @@
                 {
                     "category": "Form controls",
                     "pages": [
-                        "documentation/input"
+                        "documentation/input",
+                        "documentation/checkbox",
+                        "documentation/field",
+                        "documentation/numberinput",
+                        "documentation/radio",
+                        "documentation/select",
+                        "documentation/switch"
                     ]
                 }
             ]

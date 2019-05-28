@@ -37,14 +37,23 @@
             </et-page>
         </et-form>
 
+        <et-field label="Checkbox">
+            <et-checkbox>Check 1</et-checkbox>
+            <et-checkbox>Check 2</et-checkbox>
+            <et-checkbox>Check 3</et-checkbox>
+        </et-field>
     </section>
 </template>
 
 <script>
+    import EtCheckbox from "../../../../../src/components/checkbox/Checkbox";
     export default {
+        components: {EtCheckbox},
         data() {
             return {
-                name: 'John Silver'
+                name: 'John Silver',
+                isSwitched: false,
+                isSwitchedCustom: 'Yes'
             }
         }
     }

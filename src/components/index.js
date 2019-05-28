@@ -5,7 +5,9 @@ import Page from './page'
 import Form from './form'
 import Numberinput from './numberinput'
 import Select from './select'
-import Radio from './Radio'
+import Radio from './radio'
+import Switch from './switch'
+import Checkbox from './checkbox'
 
 export {
     Field,
@@ -15,5 +17,7 @@ export {
     Form,
     Numberinput,
     Select,
-    Radio
+    Radio,
+    Switch,
+    Checkbox
 }
