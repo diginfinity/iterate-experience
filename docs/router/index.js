@@ -38,9 +38,9 @@ const router = new Router({
                 route('documentation/contact', 'predefined/Contact'),
                 route('documentation/other', 'predefined/Other'),
                 route('documentation/input', 'components/input/Input'),
-                route('documentation/checkbox', 'components/checkbox'),
-                route('documentation/field', 'components/field'),
-                route('documentation/numberinput', 'components/numberinput'),
+                route('documentation/checkbox', 'components/checkbox/Checkbox'),
+                route('documentation/field', 'components/field/Field'),
+                route('documentation/numberinput', 'components/numberinput/Numberinput'),
                 route('documentation/radio', 'components/radio/Radio'),
                 route('documentation/select', 'components/select/Select'),
                 route('documentation/switch', 'components/switch/Switch')
