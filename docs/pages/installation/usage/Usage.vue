@@ -1,12 +1,10 @@
 <template>
     <div>
-
         <h1 class="uk-h1 tm-heading-fragment">Usage</h1>
+
         <h3 class="subtitle">Basic Concept</h3>
-           
         <p>The idea behind the ET Form is that it should be easy to implement, since the syntax is almost the same as in HTML.</p>
         <Example title="  The difference in code syntax" :component="ExDiff" :code="ExDiffCode" vertical/>
-
         <p>All other supported input types are done in a similar fashion: adding 'et-' in front of the input html element converts it to a field that shall be captured by the ET Form, and data sent to our API.</p>
         <p>Please refer to the documentation for details about other input types.</p>
 
@@ -26,13 +24,12 @@
               </ul>
             </div>
         </div>
-
         <p>Note that any ET Form must start with <code>&lt;&#47;et-form&gt;</code>, end with <code>&lt;&#47;et-form&gt;</code> and contain at least one page wrapper <code>&lt;et-page&gt;&lt;&#47;et-page&gt;</code>:</p>
         <Example title="Simplest working ET App Form with basic structure" :component="ExSimple" :code="ExSimpleCode" vertical/>
         <!-- <CodeView title="Simplest working ET App Form" :code="simple | pre" lang="html" expanded/> -->
         <p>The ET app code automatically switches the pager off, and shows a submit button instead of the 'Next' button.</p>
 
-        <h3>Data structuring for later analysis</h3>
+        <h3 class="subtitle">Data structuring for later analysis</h3>
         <p>An input form must serve its's purpose. Therefore, we must add some tags to the input fields so we know what to do with it later.</p>
         <p>The ET App Form solves this the following way: all input names, since they are already unique, also must contain some specific naming conventions.</p>
         <div class="uk-margin">
@@ -60,7 +57,7 @@
           </div>
         </div>
 
-        <h3>Wrapping it all up</h3>
+        <h3 class="subtitle">Wrapping it all up</h3>
         <p>After familiarizing ouselves with some basic concepts, let's make an example ET App Form using what we learned.</p>
         <Example title="Wrapping up our first ET Experience Form example" :component="ExWrapUp" :code="ExWrapUpCode" vertical/>
         <p>As presented here, implementation of the ET Form can be done in less than an hour. Please check the 'burek sa sirom link' for details</p>
