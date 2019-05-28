@@ -28,8 +28,8 @@ module.exports = merge(baseWebpackConfig, {
         new webpack.NoEmitOnErrorsPlugin(),
         // https://github.com/ampedandwired/html-webpack-plugin
         new HtmlWebpackPlugin({
-            filename: 'Radio.vue.html',
-            template: 'Radio.vue.html',
+            filename: 'index.html',
+            template: 'index.html',
             inject: true
         }),
         new FriendlyErrorsPlugin()
