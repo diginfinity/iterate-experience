@@ -33,7 +33,6 @@
 
 <script>
     export default {
-        components: {EtCheckbox},
         data() {
             return {
                 name: 'John Silver',
