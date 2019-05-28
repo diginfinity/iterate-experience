@@ -55,7 +55,7 @@
         <CodeView title="Wrapping it all up - our first ET App Form" :code="wrap | pre" lang="html" expanded/>
 
         <h2>Working example</h2>
-        <p>The followig is the working example of the wrap up code limited by horizontal lines.</p>
+        <p>... of the code above bordered by horizontal lines so we know where it ends.</p>
         <hr/>
         <et-form>
           <et-page>
@@ -76,10 +76,6 @@
               </et-input>
             </et-field>
           </et-page>
-
-          <et-page>
-            <h4>Test page 2</h4>
-          </et-page>
           <et-page>
             <h4>Business data</h4>
             <et-field label="Bussiness model description">
@@ -93,6 +89,8 @@
           </et-page>
         </et-form>
         <hr/>
+
+        <p>As presented here, implementation of the ET Form can be done in less than an hour. Please check the 'burek sa sirom link' for details</p>
 
     </div>
 </template>
@@ -130,8 +128,12 @@
                 </et-form>
                 `,
                 wrap: `
+                <!-- init the ET Form -->
                 <et-form>
+
+                  <!-- first page -->
                   <et-page>
+                    <!-- Add a page title in plain HTML -->
                     <h4>Personal data</h4>
                     <et-field label="First name">
                       <et-input name="first_name_personal"></et-input>
@@ -149,6 +151,8 @@
                       </et-input>
                     </et-field>
                   </et-page>
+                  
+                  <!-- second page -->
                   <et-page>
                     <h4>Business data</h4>
                     <et-field label="Bussiness model description">
@@ -160,6 +164,8 @@
                       </et-input>
                     </et-field>
                   </et-page>
+
+                <!-- close the ET Form -->
                 </et-form>
                 `,
             }
