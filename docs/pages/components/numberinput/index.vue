@@ -1,37 +1,22 @@
 <template>
-    <section>
-        <et-field label="Basic">
-            <et-numberinput v-model="number"></et-numberinput>
-        </et-field>
+    <div>
+        <Example :component="ExSimple" :code="ExSimpleCode" vertical/>
 
-        <et-field label="Input readonly">
-            <et-numberinput :editable="false"></et-numberinput>
-        </et-field>
-
-        <et-field label="Disabled">
-            <et-numberinput disabled></et-numberinput>
-        </et-field>
-
-        <div>
-            <Example :component="checkbox" :code="checkboxCode" vertical/>
-
-            <ApiView :data="api"/>
-        </div>
-
-    </section>
-
+        <ApiView :data="api"/>
+    </div>
 </template>
 
 <script>
-    import checkbox from '.././checkbox/index'
-    import checkboxCode from '!!raw-loader!.././checkbox/index'
+    import api from './api/numberinput'
+    import ExSimple from './examples/ExSimple'
+    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
 
     export default {
         data() {
             return {
-                number: 10,
-                checkbox,
-                checkboxCode
+                api,
+                ExSimple,
+                ExSimpleCode
             }
         }
     }
