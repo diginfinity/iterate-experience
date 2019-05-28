@@ -76,6 +76,10 @@
               </et-input>
             </et-field>
           </et-page>
+
+          <et-page>
+            <h4>Test page 2</h4>
+          </et-page>
           <et-page>
             <h4>Business data</h4>
             <et-field label="Bussiness model description">
@@ -89,6 +93,7 @@
           </et-page>
         </et-form>
         <hr/>
+
     </div>
 </template>
 
