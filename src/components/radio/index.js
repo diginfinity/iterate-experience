@@ -1,4 +1,4 @@
-import Radio from './Radio'
+import Radio from './radio'
 
 import { use, registerComponent } from '../../utils/plugins'
 

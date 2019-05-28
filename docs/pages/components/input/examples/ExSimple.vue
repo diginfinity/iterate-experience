@@ -42,7 +42,9 @@
     export default {
         data() {
             return {
-                name: 'John Silver'
+                name: 'John Silver',
+                isSwitched: false,
+                isSwitchedCustom: 'Yes'
             }
         }
     }
