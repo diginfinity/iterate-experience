@@ -40,6 +40,54 @@
             "documentation/customization"
         ]
     },
+    "documentation/personal": {
+        "title": "Personal",
+        "subtitle": "Predefined Personal fields",
+        "path": "/documentation/personal",
+        "githubPath": "pages/predefined/Personal.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/personal"
+        ]
+    },
+    "documentation/contact": {
+        "title": "Contact",
+        "subtitle": "Predefined Contact fields",
+        "path": "/documentation/contact",
+        "githubPath": "pages/predefined/Contact.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/contact"
+        ]
+    },
+    "documentation/business": {
+        "title": "Business",
+        "subtitle": "Predefined Business fields",
+        "path": "/documentation/business",
+        "githubPath": "pages/predefined/Business.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/Business"
+        ]
+    },
+    "documentation/other": {
+        "title": "Other",
+        "subtitle": "Predefined Other fields",
+        "path": "/documentation/other",
+        "githubPath": "pages/predefined/Other.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/other"
+        ]
+    },
     "documentation/input": {
         "title": "Input",
         "subtitle": "Get user Input. Use with <strong>Field</strong> to access all functionalities",
