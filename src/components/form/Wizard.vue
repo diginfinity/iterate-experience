@@ -17,6 +17,9 @@
         </div>
 
         <div class="et-page-navigation">
+            <div class="et-page-content">
+                <slot v-bind="slotProps"/>
+            </div>
             <ul
                 class="et-nav"
                 role="tablist"
@@ -34,17 +37,21 @@
                         :index="index"/>
                 </slot>
             </ul>
-            <div class="et-page-content">
-                <slot v-bind="slotProps"/>
-            </div>
         </div>
 
         <div class="et-footer et-clearfix">
             <slot name="footer" v-bind="slotProps">
                 <div class="et-footer-left" v-if="displayPrevButton">
-                    <slot name="prev" v-bind="slotProps">
+                    <!-- <slot name="prev" v-bind="slotProps">
                         {{ backButtonText }}
-                    </slot>
+                    </slot> -->
+                    <span
+                        @click="prevTab"
+                        @keyup.enter="prevTab"
+                        role="button"
+                        tabindex="0">
+                        {{ backButtonText }}
+                    </span>
                 </div>
 
                 <div class="et-footer-right">

@@ -9,6 +9,15 @@
             ]
         },
         {
+            "category": "Predefined Fields",
+            "pages": [
+                "documentation/personal",
+                "documentation/business",
+                "documentation/contact",
+                "documentation/other"
+            ]
+        },
+        {
             "category": "UI components",
             "pages": [
                 {
