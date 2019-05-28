@@ -28,18 +28,6 @@
             </et-input>
         </et-field>
 
-        <et-field label="Select option">
-            <et-select placeholder="Select a character">
-                <option value="flint">Flint</option>
-                <option value="silver">Silver</option>
-            </et-select>
-        </et-field>
-
-        <et-field label="Checkbox">
-            <et-checkbox>Check 1</et-checkbox>
-            <et-checkbox>Check 2</et-checkbox>
-            <et-checkbox>Check 3</et-checkbox>
-        </et-field>
     </section>
 </template>
 
