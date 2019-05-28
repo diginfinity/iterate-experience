@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="uk-h1 tm-heading-fragment">Installation</h1>
-        <p class="uk-text-lead">Learn where to download and how to compile the ETExperience sources. There is three ways to install and use ETExperience SDK</p>
+        <h4>Learn where to download and how to compile/include the ETExperience sources. There are three ways to install and use ETExperience helper library</h4>
 
         <h3 class="uk-h3 tm-heading-fragment">Icons</h3>
         <p>Several components uses icons, you might want to add a pack</p>
