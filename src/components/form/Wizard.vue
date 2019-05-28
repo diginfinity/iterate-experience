@@ -17,6 +17,9 @@
         </div>
 
         <div class="et-page-navigation">
+            <div class="et-page-content">
+                <slot v-bind="slotProps"/>
+            </div>
             <ul
                 class="et-nav"
                 role="tablist"
@@ -34,9 +37,6 @@
                         :index="index"/>
                 </slot>
             </ul>
-            <div class="et-page-content">
-                <slot v-bind="slotProps"/>
-            </div>
         </div>
 
         <div class="et-footer et-clearfix">
