@@ -40,6 +40,18 @@
             "documentation/customization"
         ]
     },
+    "documentation/usage": {
+        "title": "Usage",
+        "subtitle": "<strong>Usage</strong> and how to ET Experience",
+        "path": "/documentation/usage",
+        "githubPath": "pages/installation/Usage.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/usage"
+        ]
+    },
     "documentation/personal": {
         "title": "Personal",
         "subtitle": "Predefined Personal fields",
