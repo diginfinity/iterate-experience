@@ -1,6 +1,5 @@
 export default [
     {
-        title: 'Checkbox',
         props: [
             {
                 name: '<code>v-model</code>',
