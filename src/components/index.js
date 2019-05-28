@@ -6,6 +6,7 @@ import Form from './form'
 import Numberinput from './numberinput'
 import Select from './select'
 import Radio from './Radio'
+import Checkbox from './checkbox'
 
 export {
     Field,
@@ -15,5 +16,6 @@ export {
     Form,
     Numberinput,
     Select,
-    Radio
+    Radio,
+    Checkbox
 }
