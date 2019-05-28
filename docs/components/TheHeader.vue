@@ -9,7 +9,6 @@
                     <ul class="uk-navbar-nav">
                         <li><router-link to="/">Home</router-link></li>
                         <li><router-link to="/documentation">Documentation</router-link></li>
-                        <li><router-link to="/form">Form</router-link></li>
                         <li><router-link to="/examples">Examples</router-link></li>
                     </ul>
                 </div>
