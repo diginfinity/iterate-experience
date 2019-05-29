@@ -8,6 +8,7 @@ import Select from './select'
 import Radio from './radio'
 import Switch from './switch'
 import Checkbox from './checkbox'
+import Table from './table'
 
 export {
     Field,
@@ -19,5 +20,6 @@ export {
     Select,
     Radio,
     Switch,
-    Checkbox
+    Checkbox,
+    Table
 }

@@ -12,6 +12,8 @@
           <li>first_name</li>
           <li>last_name</li>
           <li>middle_name</li>
+          <li>user_name</li>
+          <li>password</li>
           <li>gender</li>
           <li>date_of_birth</li>
         </ul>

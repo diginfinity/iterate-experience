@@ -85,40 +85,6 @@ export default [
                 values: '—',
                 default: '—'
             }
-        ],
-        events: [
-            {
-                name: '<code>input</code>',
-                description: 'Triggers when value is changed',
-                parameters: '<code>value: String|Number</code>'
-            },
-            {
-                name: '<code>focus</code>',
-                description: 'Triggers when input has received focus',
-                parameters: '<code>event: $event</code>'
-            },
-            {
-                name: '<code>blur</code>',
-                description: 'Triggers when input has lost focus',
-                parameters: '<code>event: $event</code>'
-            },
-            {
-                name: '<code>[any].native</code>',
-                description: 'Listen to any native event, e.g. <code>click.native</code>',
-                parameters: '<code>event: $event</code>'
-            }
-        ],
-        methods: [
-            {
-                name: '<code>checkHtml5Validity</code>',
-                description: 'Check validation of HTML5 (add the message and type/color), also updates the <code>isValid</code> property',
-                return: '<code>isValid: Boolean</code>'
-            },
-            {
-                name: '<code>focus</code>',
-                description: 'Set focus (internally uses the native <code>.select()</code> method)',
-                return: '—'
-            }
         ]
     }
 ]

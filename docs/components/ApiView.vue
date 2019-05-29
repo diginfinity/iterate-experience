@@ -2,12 +2,34 @@
     <section class="api-view">
         <h2 class="uk-h4">API</h2>
         <template v-for="component in data">
+
             <div :key="component.title">
+                <!-- there are sometimes multiple items on page,
+                so we display the title of the component block -->
                 <h3
                     v-if="component.title"
                     class="subtitle">
                     {{ component.title }}
                 </h3>
+
+                <!-- we only display if props are present -->
+                <div v-if="component.props">
+                    <h4>Properties</h4>
+                    <et-table
+                        :data="component.props"
+                        :columns="propsColumns"
+                    />
+                </div>
+
+                <!-- we only display if slots are present -->
+                <div v-if="component.slots">
+                    <h4>Slots</h4>
+                    <et-table
+                        :data="component.slots"
+                        :columns="slotsColumns"
+                    />
+                </div>
+
             </div>
         </template>
     </section>
@@ -31,17 +53,6 @@
                     { label: 'Slot name', field: 'name', renderHtml: true },
                     { label: 'Description', field: 'description', renderHtml: true },
                     { label: 'Props (if scoped)', field: 'props', renderHtml: true }
-                ],
-                eventsColumns: [
-                    { label: 'Name', field: 'name', renderHtml: true },
-                    { label: 'Description', field: 'description', renderHtml: true },
-                    { label: 'Parameters', field: 'parameters', renderHtml: true }
-                ],
-                methodsColumns: [
-                    { label: 'Name', field: 'name', renderHtml: true },
-                    { label: 'Description', field: 'description', renderHtml: true },
-                    { label: 'Parameters', field: 'parameters', renderHtml: true },
-                    { label: 'Return', field: 'return', renderHtml: true }
                 ]
             }
         }

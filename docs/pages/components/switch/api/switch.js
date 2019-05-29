@@ -53,18 +53,6 @@ export default [
                 values: '—',
                 default: '—'
             }
-        ],
-        events: [
-            {
-                name: '<code>input</code>',
-                description: 'Triggers when the value of the switch is changed',
-                parameters: '<code>value: Boolean</code>'
-            },
-            {
-                name: '<code>[any].native</code>',
-                description: 'Listen to any event using this syntax, e.g <code>click.native</code>',
-                parameters: '<code>event: $event</code>'
-            }
         ]
     }
 ]

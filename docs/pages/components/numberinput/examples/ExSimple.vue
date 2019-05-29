@@ -1,15 +1,15 @@
 <template>
     <section>
         <et-field label="Basic">
-            <et-numberinput v-model="number"></et-numberinput>
+            <et-numberinput name="test_number_other" v-model="number"></et-numberinput>
         </et-field>
 
         <et-field label="Input readonly">
-            <et-numberinput :editable="false"></et-numberinput>
+            <et-numberinput name="test_number_1_other" :editable="false"></et-numberinput>
         </et-field>
 
         <et-field label="Disabled">
-            <et-numberinput disabled></et-numberinput>
+            <et-numberinput name="test_number_2_other" disabled></et-numberinput>
         </et-field>
 
     </section>
