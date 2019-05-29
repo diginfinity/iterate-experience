@@ -4,8 +4,8 @@
             "category": "Installation",
             "pages": [
                 "documentation/start",
-                "documentation/customization",
-                "documentation/usage"
+                "documentation/usage",
+                "documentation/customization"
             ]
         },
         {
