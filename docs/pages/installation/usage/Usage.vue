@@ -60,7 +60,7 @@
         <h3 class="subtitle">Wrapping it all up</h3>
         <p>After familiarizing ouselves with some basic concepts, let's make an example ET App Form using what we learned.</p>
         <Example title="Wrapping up our first ET Experience Form example" :component="ExWrapUp" :code="ExWrapUpCode" vertical/>
-        <p>As presented here, implementation of the ET Form can be done in less than an hour. Please check the 'burek sa sirom link' for details</p>
+        <p>As presented here, implementation of the ET Form can be done in less than an hour. Please check the <router-link to="/documentation/customization">Customization</router-link> for more details.</p>
 
     </div>
 </template>

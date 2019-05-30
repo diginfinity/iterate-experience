@@ -28,18 +28,6 @@
             "documentation/start"
         ]
     },
-    "documentation/customization": {
-        "title": "Customization",
-        "subtitle": "<strong>Three ways</strong> to install and use ET Experience",
-        "path": "/documentation/customization",
-        "githubPath": "pages/installation/Customization.vue",
-        "menu": "documentation",
-        "breadcrumb": [
-            "/",
-            "documentation",
-            "documentation/customization"
-        ]
-    },
     "documentation/usage": {
         "title": "Usage",
         "subtitle": "<strong>Usage</strong> and how to ET Experience",
@@ -50,6 +38,18 @@
             "/",
             "documentation",
             "documentation/usage"
+        ]
+    },
+    "documentation/customization": {
+        "title": "Customization",
+        "subtitle": "<strong>Three ways</strong> to install and use ET Experience",
+        "path": "/documentation/customization",
+        "githubPath": "pages/installation/Customization.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/customization"
         ]
     },
     "documentation/personal": {
