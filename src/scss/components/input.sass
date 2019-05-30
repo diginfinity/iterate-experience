@@ -1,0 +1,30 @@
+.et-input,
+.et-textarea 
+  background-color: $backgroundColor
+  border-color: #eee
+  color: $textColor
+  box-shadow: $innerShadow
+  border: 1px solid #ccc
+  border-radius: $borderRadius
+  display: inline-flex
+  justify-content: flex-start
+  font-size: 1em
+  line-height: 1.25em
+  padding: calc(.7em - 1px) calc(.7em - 1px)
+  vertical-align: top
+  max-width: 100%
+  width: 100% // calc(100% - 1.4em)
+  &.et-is-primary
+    border-color: $primary
+  &.et-is-info
+    border-color: $info
+  &.et-is-success
+    border-color: $success
+  &.et-is-warning
+    border-color: $warning
+  &.et-is-danger
+    border-color: $danger
+
+.et-textarea
+  max-height: 75vh
+  resize: vertical

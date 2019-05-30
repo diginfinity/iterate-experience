@@ -28,6 +28,10 @@
             </et-input>
         </et-field>
 
+        <et-field label="Message">
+            <et-input maxlength="200" type="textarea" name="product_description_business"></et-input>
+        </et-field>
+
     </section>
 </template>
 

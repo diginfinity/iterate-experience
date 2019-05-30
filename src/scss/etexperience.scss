@@ -5,3 +5,9 @@
 
 // 2. Components
 @import "components/all";
+
+// 3. Common
+@import "common.sass";
+
+// at the end. Documentation styles
+@import "documentation.sass";
