@@ -43,7 +43,11 @@ const router = new Router({
                 route('documentation/numberinput', 'components/numberinput/Numberinput'),
                 route('documentation/radio', 'components/radio/Radio'),
                 route('documentation/select', 'components/select/Select'),
-                route('documentation/switch', 'components/switch/Switch')
+                route('documentation/switch', 'components/switch/Switch'),
+                // Examples
+                route('examples', 'Examples'),
+                route('examples/singleform', 'examples/singleform/Singleform'),
+                route('examples/multiform', 'examples/multiform/Multiform')
             ]
         },
         // Global redirect
