@@ -31,8 +31,8 @@
             type="textarea"
             name="model_description_business"
             maxlength="1000"
-            placeholder="Please enter the description of the business model you use">
-            v-model="model_description_business"
+            placeholder="Please enter the description of the business model you use"
+            v-model="model_description_business">
           </et-input>
         </et-field>
       </et-page>

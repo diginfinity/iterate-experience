@@ -24,7 +24,7 @@
               </ul>
             </div>
         </div>
-        <p>Note that any ET Form must start with <code>&lt;&#47;et-form&gt;</code>, end with <code>&lt;&#47;et-form&gt;</code> and contain at least one page wrapper <code>&lt;et-page&gt;&lt;&#47;et-page&gt;</code>:</p>
+        <p>Note that any ET Form must start with <code>&lt;et-form&gt;</code>, end with <code>&lt;&#47;et-form&gt;</code> and contain at least one page wrapper <code>&lt;et-page&gt;&lt;&#47;et-page&gt;</code>:</p>
         <Example title="Simplest working ET App Form with basic structure" :component="ExSimple" :code="ExSimpleCode" vertical/>
         <!-- <CodeView title="Simplest working ET App Form" :code="simple | pre" lang="html" expanded/> -->
         <p>The ET app code automatically switches the pager off, and shows a submit button instead of the 'Next' button.</p>
