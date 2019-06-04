@@ -4,27 +4,12 @@
         class="et-form"
         @keyup.right="focusNextTab"
         @keyup.left="focusPrevTab">
-        <div
-            class="et-form-header"
-            v-if="$slots['title']">
-            <slot
-                name="et-form-title">
-                <h4
-                    class="et-title">{{ title }}</h4>
-                <p
-                    class="et-subtitle">{{ subtitle }}</p>
-            </slot>
-        </div>
 
         <div class="et-page-navigation">
-            <div class="et-page-content">
-                <slot v-bind="slotProps"/>
-            </div>
             <ul
                 class="et-nav"
                 role="tablist"
                 v-if="tabCount > 1">
-                <div class="et-pager-title">Pages</div>
                 <slot
                     name="step"
                     v-for="(tab, index) in tabs"
@@ -38,10 +23,21 @@
                         :index="index"/>
                 </slot>
             </ul>
-            <div
-                v-else
-                class="et-nav-spacer"
-                role="tablist"/>
+            <div class="et-page-content">
+                <slot v-bind="slotProps"/>
+            </div>
+        </div>
+
+        <div
+            class="et-form-header"
+            v-if="$slots['title']">
+            <slot
+                name="et-form-title">
+                <h4
+                    class="et-title">{{ title }}</h4>
+                <p
+                    class="et-subtitle">{{ subtitle }}</p>
+            </slot>
         </div>
 
         <div class="et-footer et-clearfix">
