@@ -183,5 +183,40 @@
             "documentation",
             "documentation/switch"
         ]
+    },
+    "examples": {
+        "title": "Examples",
+        "subtitle": "See ET-Experience forms examples",
+        "path": "/examples",
+        "githubPath": "pages/Examples.vue",
+        "menu": "examples",
+        "breadcrumb": [
+            "/",
+            "examples"
+        ]
+    },
+    "examples/singleform": {
+        "title": "Single Form",
+        "subtitle": "Example of the single page form ET Experience",
+        "path": "/examples/singleform",
+        "githubPath": "pages/examples/singleform/Singleform.vue",
+        "menu": "examples",
+        "breadcrumb": [
+            "/",
+            "examples",
+            "examples/singleform"
+        ]
+    },
+    "examples/multiform": {
+        "title": "Multi Form",
+        "subtitle": "Example of the multi page form ET Experience",
+        "path": "/examples/multiform",
+        "githubPath": "pages/examples/multiform/Multiform.vue",
+        "menu": "examples",
+        "breadcrumb": [
+            "/",
+            "examples",
+            "examples/multiform"
+        ]
     }
 }

@@ -34,5 +34,14 @@
                 }
             ]
         }
+    ],
+    "examples": [
+        {
+            "category": "Forms",
+            "pages": [
+                "examples/singleform",
+                "examples/multiform"
+            ]
+        }
     ]
 }
