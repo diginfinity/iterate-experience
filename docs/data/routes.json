@@ -207,18 +207,6 @@
             "examples/singleform"
         ]
     },
-    "examples/singleformdemo": {
-        "title": "Single Form Demo",
-        "subtitle": "Example of the single page form ET Experience",
-        "path": "/examples/singleformdemo",
-        "githubPath": "pages/examples/singleform/Singleformdemo.vue",
-        "menu": "examples",
-        "breadcrumb": [
-            "/",
-            "examples",
-            "examples/singleformdemo"
-        ]
-    },
     "examples/multiform": {
         "title": "Multi Form",
         "subtitle": "Example of the multi page form ET Experience",

@@ -4,8 +4,8 @@
         <TheSidebar v-if="!meta.hideSidebar" :data="menu"/>
         <div class="et-main uk-section uk-section-default">
             <div class="uk-container uk-container-small uk-position-relative">
-                <router-view/>
                 cucla
+                <router-view/>
             </div>
         </div>
     </main>
