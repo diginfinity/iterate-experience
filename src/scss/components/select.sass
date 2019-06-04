@@ -1,0 +1,52 @@
+.et-select:not(.et-is-multiple)
+  height: 2.25em
+.et-select
+  display: inline-block
+  max-width: 100%
+  position: relative
+  vertical-align: top
+  select
+    cursor: pointer
+    display: block
+    font-size: 1em
+    max-width: 100%
+    outline: none
+    padding-right: 2.5em
+.et-select select, .et-taginput .et-taginput-container.et-is-focusable
+  background-color: #fff
+  border-color: #dbdbdb
+  color: #363636
+  border-style: solid
+  border-width: 1px
+.et-select select:not([multiple])
+  padding-right: 2.5em
+.et-select.et-is-empty select
+  color: hsla(0,0%,48%,.7)
+.et-select:not(.et-is-multiple)::after
+  border-color: #7957d5
+  right: 1.125em
+  z-index: 4
+.et-select:not(.et-is-multiple)::after
+  border: 3px solid transparent
+  border-radius: 2px
+  border-right: 0
+  border-top: 0
+  content: " "
+  display: block
+  height: .625em
+  margin-top: -.4375em
+  pointer-events: none
+  position: absolute
+  top: 50%
+  transform: rotate(-45deg)
+  transform-origin: center
+  width: .625em
+.et-select:not(.is-multiple)::after
+  border-color: #3273dc
+.et-select.et-is-fullwidth, .et-select.et-is-fullwidth select
+  width: 100%
+.et-select.et-is-danger:not(:hover)::after, .et-select.et-is-danger select
+  border-color: $danger
+.et-select select[multiple]
+  height: auto
+  padding: 0

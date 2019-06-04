@@ -5,9 +5,9 @@ export default [
                 name: '<code>type</code>',
                 description: 'Type (color) of the switch, optional',
                 type: 'String',
-                values: `<code>is-white</code>, <code>is-black</code>, <code>is-light</code>,
-                    <code>is-dark</code>, <code>is-primary</code>, <code>is-info</code>, <code>is-success</code>,
-                    <code>is-warning</code>, <code>is-danger</code>,
+                values: `<code>et-is-white</code>, <code>et-is-black</code>, <code>et-is-light</code>,
+                    <code>et-is-dark</code>, <code>et-is-primary</code>, <code>et-is-info</code>, <code>et-is-success</code>,
+                    <code>et-is-warning</code>, <code>et-is-danger</code>,
                     and any other colors you've set in the <code>$colors</code> list on Sass`,
                 default: '—'
             },

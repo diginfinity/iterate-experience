@@ -1,6 +1,6 @@
 <template>
     <div class="et-numberinput et-field" :class="fieldClasses">
-        <p class="control">
+        <p class="et-control">
             <button
                 type="button"
                 class="et-button"

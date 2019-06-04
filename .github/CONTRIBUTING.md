@@ -46,7 +46,7 @@ And here is one about the FLIP technique (which ``<transition-group>`` uses inte
 
 Add comments if method is too complex and/or whenever you judge necessary.
 
-## Buefy Sass styleguide
+## EtExperience Sass styleguide
 
 * **Always on a separated file** in ``/src/scss/components``
 * **Use .scss extension**

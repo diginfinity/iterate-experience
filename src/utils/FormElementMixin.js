@@ -102,7 +102,7 @@ export default {
 
         /**
          * Check HTML5 validation, set isValid property.
-         * If validation fail, send 'is-danger' type,
+         * If validation fail, send 'et-is-danger' type,
          * and error message to parent if it's a Field.
          */
         checkHtml5Validity() {
@@ -116,7 +116,7 @@ export default {
             let message = null
             let isValid = true
             if (!el.checkValidity()) {
-                type = 'is-danger'
+                type = 'et-is-danger'
                 message = el.validationMessage
                 isValid = false
             }

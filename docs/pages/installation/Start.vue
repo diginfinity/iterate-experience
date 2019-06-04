@@ -95,10 +95,10 @@
                 `,
                 importingSSR: `
                 import Vue from 'vue'
-                import ETExperience from 'buefy'
+                import ETExperience from 'etexperience'
                 import 'iterate-experience/dist/etexperience.css'
                 Vue.use(ETExperience) `,
-                installNuxtBuefy: `
+                installNuxtEtExperience: `
                 // with npm
                 npm install nuxt-iterate-experience
                 // with yarn

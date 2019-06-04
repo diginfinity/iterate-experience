@@ -5,6 +5,22 @@
 ::before
   box-sizing: inherit
 
+.et-button, .et-file-cta, .et-file-name, .et-input, .et-pagination-ellipsis, .et-pagination-link, .et-pagination-next, .et-pagination-previous, .et-select select, .et-taginput .et-taginput-container.is-focusable, .et-textarea
+  -moz-appearance: none
+  -webkit-appearance: none
+  align-items: center
+  // border: 1px solid transparent
+  // border-radius: 4px
+  box-shadow: none
+  display: inline-flex
+  font-size: 1rem
+  height: 2.25em
+  justify-content: flex-start
+  line-height: 1.5
+  padding: calc(.375em - 1px) calc(.625em - 1px)
+  position: relative
+  vertical-align: top
+
 .et-control
   box-sizing: border-box
   clear: both
@@ -27,7 +43,7 @@
   &.et-has-icons-right
     .et-icon
       width: 2.6em
-      height: 2.6em
+      // height: 2.6em
       position: absolute
       top: 0
       z-index: 10
@@ -52,3 +68,15 @@
 
 .et-is-invisible
   display: none
+
+.checkbox[disabled],
+.radio[disabled],
+fieldset[disabled] .checkbox,
+fieldset[disabled] .radio,
+.et-select select[disabled]
+  color: $disabled
+  cursor: not-allowed
+
+.et-field.et-is-grouped
+  display: flex
+  justify-content: flex-start

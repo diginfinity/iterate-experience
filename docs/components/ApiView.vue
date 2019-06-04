@@ -14,7 +14,7 @@
 
                 <!-- we only display if props are present -->
                 <div v-if="component.props">
-                    <h4>Properties</h4>
+                    <h5>Properties</h5>
                     <et-table
                         :data="component.props"
                         :columns="propsColumns"
@@ -23,7 +23,7 @@
 
                 <!-- we only display if slots are present -->
                 <div v-if="component.slots">
-                    <h4>Slots</h4>
+                    <h5>Slots</h5>
                     <et-table
                         :data="component.slots"
                         :columns="slotsColumns"

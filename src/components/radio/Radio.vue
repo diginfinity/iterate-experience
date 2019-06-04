@@ -1,24 +1,23 @@
 <template>
-    <div class="et-control">
-        <label
-            class="et-radio radio"
-            ref="label"
-            :class="[newValue === nativeValue ? type : null, size]"
+    <label
+        class="et-radio radio"
+        ref="label"
+        :class="[size, { 'is-disabled': disabled }]"
+        :disabled="disabled"
+        :tabindex="disabled ? false : 0"
+        @keydown.prevent.enter.space="$refs.label.click()">
+        <input
+            v-model="computedValue"
+            tabindex="-1"
+            type="radio"
+            @click.stop
             :disabled="disabled"
-            :tabindex="disabled ? false : 0"
-            @keydown.prevent.enter.space="$refs.label.click()">
-            <slot/>
-            <input
-                v-model="computedValue"
-                tabindex="-1"
-                type="radio"
-                @click.stop
-                :disabled="disabled"
-                :required="required"
-                :name="name"
-                :value="nativeValue">
-        </label>
-    </div>
+            :required="required"
+            :name="name"
+            :value="nativeValue">
+        <span class="check" :class="type" />
+        <span class="et-control-label"><slot/></span>
+    </label>
 </template>
 
 <script>
@@ -29,13 +28,10 @@
         props: {
             value: [String, Number, Boolean, Function, Object, Array, Symbol],
             nativeValue: [String, Number, Boolean, Function, Object, Array, Symbol],
-            type: {
-                type: String,
-                default: 'radio'
-            },
-            name: String,
+            type: String,
             disabled: Boolean,
             required: Boolean,
+            name: String,
             size: String
         },
         data() {

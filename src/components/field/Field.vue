@@ -81,7 +81,7 @@
                 }]
             },
             /**
-             * Correct Bulma class for the side of the addon or group.
+             * Correct class for the side of the addon or group.
              *
              * This is not kept like the others (is-small, etc.),
              * because since 'has-addons' is set automatically it

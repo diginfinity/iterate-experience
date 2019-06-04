@@ -1,6 +1,5 @@
 <template>
     <section>
-        <h3>Multiple</h3>
         <p class="content"><b>selected</b>: {{ selectedOptions }}</p>
         <et-field>
             <et-select

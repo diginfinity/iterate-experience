@@ -1,7 +1,7 @@
 <template>
     <div>
         <p class="breadcrumb">Field Customizations</p>
-        <h1>Input type elements</h1>
+        <h1>Input</h1>
 
         <h4>Basic examples</h4>
         <Example :component="ExSimple" :code="ExSimpleCode" vertical/>
@@ -9,7 +9,9 @@
         <h4>Using icons</h4>
         <Example :component="ExIcons" :code="ExIconsCode" vertical/>
 
-        <p>Please use the <code>&lt;et-field&gt;</code> wrapper to get all functionaity.</p>
+        <p>Note that you manualy need to link icons in order to work, depending on how you are implementig the ET form.</p>
+
+        <p>Please use the <code>&lt;et-field&gt;</code> wrapper to get full functionaity for all input types.</p>
 
         <ApiView :data="api"/>
 

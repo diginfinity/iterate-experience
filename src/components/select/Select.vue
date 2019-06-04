@@ -1,32 +1,35 @@
 <template>
     <div
-        class="et-select"
-        :class="{'et-has-icon': icon}">
-        <!-- <span class="et-select" :class="spanClasses"> -->
-        <select
-            v-model="computedValue"
-            ref="select"
-            :multiple="multiple"
-            v-bind="$attrs"
-            @blur="$emit('blur', $event)"
-            @focus="$emit('focus',$event)">
+        class="et-control"
+        :class="{ 'et-is-expanded': expanded, 'et-has-icons-left': icon }">
+        <span class="et-select" :class="spanClasses">
 
-            <template v-if="placeholder">
-                <option
-                    v-if="computedValue == null"
-                    :value="null"
-                    disabled
-                    hidden>
-                    {{ placeholder }}
-                </option>
-            </template>
-            <slot/>
+            <select
+                v-model="computedValue"
+                ref="select"
+                :multiple="multiple"
+                :size="nativeSize"
+                v-bind="$attrs"
+                @blur="$emit('blur', $event) && checkHtml5Validity()"
+                @focus="$emit('focus', $event)">
 
-        </select>
-        <!-- </span> -->
-        <et-icon
+                <template v-if="placeholder">
+                    <option
+                        v-if="computedValue == null"
+                        :value="null"
+                        disabled
+                        hidden>
+                        {{ placeholder }}
+                    </option>
+                </template>
+                <slot/>
+
+            </select>
+        </span>
+
+        <b-icon
             v-if="icon"
-            class="is-left"
+            class="et-is-left"
             :icon="icon"
             :pack="iconPack"
             :size="iconSize"/>
@@ -50,7 +53,8 @@
                 default: null
             },
             placeholder: String,
-            multiple: Boolean
+            multiple: Boolean,
+            nativeSize: [String, Number]
         },
         data() {
             return {
@@ -68,6 +72,13 @@
                     this.$emit('input', value)
                     !this.isValid && this.checkHtml5Validity()
                 }
+            },
+            spanClasses() {
+                return [this.statusType, {
+                    'et-is-fullwidth': this.expanded,
+                    'et-is-multiple': this.multiple,
+                    'et-is-empty': this.selected === null
+                }]
             }
         },
         watch: {

@@ -9,13 +9,6 @@ export default [
                 default: '—'
             },
             {
-                name: '<code>size</code>',
-                description: 'Size of the select, optional',
-                type: 'String',
-                values: '<code>is-small</code>, <code>is-medium</code>, <code>is-large</code>',
-                default: '—'
-            },
-            {
                 name: '<code>placeholder</code>',
                 description: 'Text when nothing is selected',
                 type: 'String',

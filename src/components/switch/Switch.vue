@@ -19,8 +19,8 @@
             :value="nativeValue"
             :true-value="trueValue"
             :false-value="falseValue">
-        <span class="check" :class="[{ 'is-elastic': isMouseDown && !disabled }, type]"/>
-        <span class="control-label"><slot/></span>
+        <span class="et-check" :class="[{ 'is-elastic': isMouseDown && !disabled }, type]"/>
+        <span class="et-control-label"><slot/></span>
     </label>
 </template>
 

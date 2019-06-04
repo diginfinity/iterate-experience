@@ -16,7 +16,33 @@ h5
 
 .breadcrumb
   font-size: 18px
-  color: #999
+  color: #bbb
   font-weight: 800
   display: block
-  border-bottom: 1px solid #999
+  border-bottom: 1px solid #ccc
+.expandedView
+  max-height: 125px
+  overflow: hidden
+  
+.codeview
+  position: relative
+  .code-example
+    padding-top: 45px
+  &:not(.expandedView)
+    .overlay
+      display: none
+.codeview .overlay
+  background-image: linear-gradient(to top,rgba(255,255,255,0.75),rgba(255,255,255,0.5))
+  background-size: cover
+  position: absolute
+  left: 0
+  top: 25px
+  right: 0
+  bottom: 0
+  max-height: 100px
+.clicktoexpand
+  font-size: 12px
+  cursor: pointer
+  padding: 5px 0 0 5px
+p:last-child
+  margin-bottom: 0

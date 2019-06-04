@@ -16,13 +16,6 @@ export default [
                 default: '<code>text</code>'
             },
             {
-                name: '<code>size</code>',
-                description: 'Vertical size of input, optional',
-                type: 'String',
-                values: '<code>is-small</code>, <code>is-medium</code>, <code>is-large</code>',
-                default: '—'
-            },
-            {
                 name: '<code>expanded</code>',
                 description: 'Makes input full width when inside a grouped or addon field',
                 type: 'Boolean',
@@ -32,13 +25,6 @@ export default [
             {
                 name: '<code>password-reveal</code>',
                 description: 'Add the reveal password functionality',
-                type: 'Boolean',
-                values: '—',
-                default: '<code>false</code>'
-            },
-            {
-                name: '<code>loading</code>',
-                description: 'Add the loading state to the input',
                 type: 'Boolean',
                 values: '—',
                 default: '<code>false</code>'

@@ -28,7 +28,7 @@
                 this.clipboard.on('error', (e) => {
                     // this.$toast.open({
                     //     message: 'Error while copying to clipboard :(',
-                    //     type: 'is-danger'
+                    //     type: 'et-is-danger'
                     // })
                 })
             }

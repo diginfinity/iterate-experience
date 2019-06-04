@@ -1,7 +1,7 @@
 <template>
     <section>
         <et-field label="Email"
-                  type="is-danger"
+                  type="et-is-danger"
                   message="This email is invalid!">
             <et-input type="email"
                       value="john@"
@@ -11,7 +11,7 @@
         </et-field>
 
         <et-field label="Username"
-                  type="is-success"
+                  type="et-is-success"
                   message="This username is available">
             <et-input
                 value="johnsilver"
@@ -21,7 +21,7 @@
         </et-field>
 
         <et-field label="Password"
-                  type="is-warning"
+                  type="et-is-warning"
                   :message="['Password is too short', 'Password must have at least 8 characters']">
             <et-input value="123" type="password" name="password_personal" maxlength="30"></et-input>
         </et-field>

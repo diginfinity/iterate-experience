@@ -1,0 +1,71 @@
+.et-switch 
+  cursor: pointer
+  display: inline-flex
+  align-items: center
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  .et-control-label
+    padding-left: .5em
+.et-switch input[type="checkbox"]
+  position: absolute
+  left: 0
+  opacity: 0
+  outline: none
+  z-index: -1
+.et-switch input[type="checkbox"] + .et-check
+  display: flex
+  align-items: center
+  flex-shrink: 0
+  width: 2.4em
+  height: 1.1em
+  padding: .35em
+  background: #d8d8d8
+  border-radius: 1em
+  transition: background .15s ease-out
+.et-switch input[type="checkbox"] + .et-check::before
+  content: ""
+  display: block
+  border-radius: 1em
+  width: 1.2em
+  height: 1.2em
+  background: #f5f5f5
+  box-shadow: 0 3px 1px 0 rgba(0,0,0,.05),0 2px 2px 0 rgba(0,0,0,.1),0 3px 3px 0 rgba(0,0,0,.05)
+  transition: transform .15s ease-out,width .15s ease-out
+  will-change: transform
+.et-switch input[type="checkbox"]:checked + .et-check
+    background: $primary
+.et-switch input[type="checkbox"]:checked + .et-check::before
+  transform: translate3d(100%,0,0)
+// .et-switch:hover input[type="checkbox"] + .et-checks
+  // background-color: rgba($primary, $hoverTransparency) 
+// color coded
+// info
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-info
+  background-color: $info
+// success
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-success
+  background-color: $success
+// warning
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-warning
+  background-color: $warning
+// danger
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-danger
+  background-color: $danger
+// white
+.et-switch input[type="checkbox"] + .et-check.et-is-white
+  background-color: $white
+  box-shadow: $innerShadow
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-white
+  background-color: #f8f8f8
+// light
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-light
+  background-color: $light
+// dark
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-dark
+  background-color: $dark
+// light
+.et-switch input[type="checkbox"]:checked + .et-check.et-is-black
+  background-color: #000

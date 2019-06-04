@@ -1,40 +1,37 @@
 <template>
     <section>
-        <h3>Basic</h3>
-        <et-field>
-            <et-radio label="Radio"
-                      v-model="radio"
-                      native-value="Flint"
-                      name="radio">Flint
-            </et-radio>
+        <div class="block">
 
-            <et-radio label="Radio"
-                      v-model="radio"
-                      native-value="Silver"
-                      name="radio">Silver
+            <et-radio v-model="radio"
+                native-value="Signals">
+                Signals
             </et-radio>
-        </et-field>
-        <p>Selection: {{ radio }}</p>
-
-        <h3>Disabled</h3>
-        <et-field>
-            <et-radio label="Radio"
-                      nativeValue="Silver"
-                      name="radio"
-                      disabled>Disabled
-
+            <et-radio v-model="radio"
+                native-value="Currate">
+                Currate
             </et-radio>
-        </et-field>
+            <et-radio v-model="radio"
+                native-value="Iterate">
+                Iterate
+            </et-radio>
+            <et-radio v-model="radio"
+                native-value="PilotPass"
+                disabled>
+                PilotPass
+            </et-radio>
+        </div>
+        <p class="content">
+            <b>Selection:</b>
+            {{ radio }}
+        </p>
     </section>
 </template>
 
 <script>
-
     export default {
         data() {
             return {
-                radio: 'Silver',
-
+                radio: 'Currate'
             }
         }
     }

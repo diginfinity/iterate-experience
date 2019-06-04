@@ -1,7 +1,15 @@
 <template>
     <div>
+        <p class="breadcrumb">Field Customizations</p>
+        <h1>Select</h1>
+
+        <h4>Basic examples</h4>
         <Example :component="ExSimple" :code="ExSimpleCode" vertical/>
+
+        <h4>Multi-select</h4>
         <Example :component="ExMultiple" :code="ExMultipleCode" vertical/>
+
+        <h4>Icon select</h4>
         <Example :component="ExIcons" :code="ExIconsCode" vertical/>
 
         <ApiView :data="api"/>
