@@ -17,7 +17,7 @@ function route(path, component) {
 
 // Templates
 const Documentation = () => import('@/templates/Documentation')
-// const DemoView = () => import('@/templates/Embeddedview')
+const DemoView = () => import('@/templates/Embeddedview')
 
 const router = new Router({
     mode: 'history',
@@ -49,6 +49,15 @@ const router = new Router({
                 route('examples', 'Examples'),
                 route('examples/singleform', 'examples/singleform/Singleform'),
                 route('examples/multiform', 'examples/multiform/Multiform')
+            ]
+        },
+        {
+            path: '/',
+            component: DemoView,
+            children: [
+                route('demo', 'Demo'),
+                route('demo/singlepage', 'demo/singlepage/SinglePage'),
+                route('demo/multipage', 'demo/multipage/MultiPage')
             ]
         },
         // Global redirect
