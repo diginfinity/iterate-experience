@@ -104,8 +104,20 @@
       return {
         first_name: '',
         last_name:'',
+        middle_name: '',
+        user_name: '',
+        email: '',
+        phone: '',
+        address_street: '',
+        address_street_number: '',
+        address_city: '',
+        address_state: '',
         email_business: '',
-        model_description_business: ''
+        model_description_business: '',
+        company_name: '',
+        company_description: '',
+        product_description: '',
+        ulta_beauty_who_recommended_custom_data_other: ''
       }
     }
   }
