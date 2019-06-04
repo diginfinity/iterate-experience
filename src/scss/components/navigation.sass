@@ -1,0 +1,38 @@
+.et-nav
+  padding-left: 0
+  // background-color: #f00
+  list-style: none
+  display: flex
+  li
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 2em
+    height: 2em
+    border: 1px solid #999999
+    border-radius: $borderRadius
+    &:not(:last-child)
+      margin-right: 0.5rem
+    &.active
+      background-color: #ddd
+.et-pager-title
+  height: 2em
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: 1em
+.et-footer
+  display: flex
+  justify-content: space-between
+  .et-footer-left,
+  .et-footer-right
+    display: flex
+    justify-content: center
+    align-items: center
+    width: auto
+    min-width: 20%
+    padding: 0.75em
+    // height: 2em
+    border: 1px solid #999999
+    border-radius: $borderRadius
+
