@@ -24,6 +24,7 @@
                 class="et-nav"
                 role="tablist"
                 v-if="tabCount > 1">
+                <div class="et-pager-title">Pages</div>
                 <slot
                     name="step"
                     v-for="(tab, index) in tabs"
@@ -228,6 +229,7 @@
             },
             navigateToTab(index) {
                 let validate = index > this.activeTabIndex
+                this.maxStep = this.tabCount - 1
                 if (index <= this.maxStep) {
                     let cb = () => {
                         if (validate && index - this.activeTabIndex > 1) {

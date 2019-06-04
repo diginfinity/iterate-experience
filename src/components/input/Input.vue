@@ -38,7 +38,7 @@
         <et-icon
             v-if="!loading && (passwordReveal || statusType)"
             class="et-is-right"
-            :class="{ 'is-clickable': passwordReveal }"
+            :class="{ 'et-is-clickable': passwordReveal }"
             :icon="passwordReveal ? passwordVisibleIcon : statusTypeIcon"
             :pack="iconPack"
             :size="iconSize"
