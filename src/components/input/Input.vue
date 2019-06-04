@@ -69,6 +69,7 @@
         mixins: [FormElementMixin, RequiredProps],
         inheritAttrs: false,
         props: {
+            name: [Number, String],
             value: [Number, String],
             type: {
                 type: String,

@@ -3,6 +3,7 @@
         <h5 class="subtitle">With Material Design Icons</h5>
         <et-field>
             <et-input placeholder="Search..."
+                name="name"
                 type="search"
                 icon="magnify">
             </et-input>
@@ -31,7 +32,9 @@
         </et-field>
 
         <et-field>
-            <et-input placeholder="Email"
+            <et-input
+                name="email_contact"
+                placeholder="Email"
                 type="email"
                 icon-pack="fas"
                 icon="envelope">

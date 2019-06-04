@@ -4,7 +4,7 @@
                   type="et-is-danger"
                   message="This email is invalid!">
             <et-input type="email"
-                      value="john@"
+                      value="jon@"
                       name="email_contact"
                       maxlength="30">
             </et-input>
@@ -14,7 +14,7 @@
                   type="et-is-success"
                   message="This username is available">
             <et-input
-                value="johnsilver"
+                value="jon"
                 name="user_name_personal"
                 maxlength="30">
             </et-input>

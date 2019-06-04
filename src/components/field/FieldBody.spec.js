@@ -4,7 +4,7 @@ import EtField from '@components/field/Field'
 import EtInput from '@components/input/Input'
 
 const localVue = createLocalVue()
-localVue.component('b-field', EtField)
+localVue.component('et-field', EtField)
 
 describe('EtFieldBody', () => {
     it('is called', () => {
