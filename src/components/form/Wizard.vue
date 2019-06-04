@@ -38,6 +38,10 @@
                         :index="index"/>
                 </slot>
             </ul>
+            <div
+                v-else
+                class="et-nav-spacer"
+                role="tablist"/>
         </div>
 
         <div class="et-footer et-clearfix">

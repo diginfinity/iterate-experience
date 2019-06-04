@@ -12,6 +12,7 @@
 
 <script>
     import Wizard from './Wizard'
+    import axios from 'axios'
 
     export default {
         name: 'EtForm',
@@ -122,6 +123,27 @@
                 // let data = q.join('&')
                 // eslint-disable-next-line
                 console.log(q)
+                let payload = {
+                    data: q,
+                    formID: 1,
+                    key: 'asdsad3yhsr',
+                    userID: '2364'
+                }
+                axios({
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    method: 'post',
+                    data: payload
+                })
+                .then(function (response) {
+                    // your action after success
+                    // eslint-disable-next-line
+                    console.log(response)
+                })
+                .catch(function (error) {
+                    // your action on error success
+                    // eslint-disable-next-line
+                    console.log(error)
+                })
             }
         }
     }
