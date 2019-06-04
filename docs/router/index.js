@@ -52,8 +52,13 @@ const router = new Router({
             ]
         },
         {
-            path: '/demo',
-            component: DemoView
+            path: '/',
+            component: DemoView,
+            children: [
+                route('demo', 'Demo'),
+                route('demo/singlepage', 'demo/singlepage/SinglePage'),
+                route('demo/multipage', 'demo/multipage/MultiPage')
+            ]
         },
         // Global redirect
         { path: '*', redirect: '' }

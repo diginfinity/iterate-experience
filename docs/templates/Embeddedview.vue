@@ -5,7 +5,7 @@
         <div class="et-main uk-section uk-section-default">
             <div class="uk-container uk-container-small uk-position-relative">
                 <router-view/>
-                cucla
+                cucla cucla cuclu
             </div>
         </div>
     </main>
