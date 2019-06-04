@@ -27,7 +27,7 @@
             </select>
         </span>
 
-        <b-icon
+        <et-icon
             v-if="icon"
             class="et-is-left"
             :icon="icon"
