@@ -40,7 +40,6 @@
             "category": "Forms",
             "pages": [
                 "examples/singleform",
-                "examples/singleformdemo",
                 "examples/multiform"
             ]
         }
