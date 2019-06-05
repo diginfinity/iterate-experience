@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- init the ET Form -->
-    <et-form>
+    <et-form name="6"> <!-- the form name is the form ID -->
       <!-- first page -->
       <et-page>
         <!-- Add a page title in plain HTML -->

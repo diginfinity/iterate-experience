@@ -53,6 +53,11 @@
                 }
             }
         },
+        data() {
+            return {
+                formName: '0'
+            }
+        },
         methods: {
             onComplete() {
                 let form = this.$refs.et_application_form
@@ -69,16 +74,23 @@
                         continue
                     }
 
+                    // eslint-disable-next-line
+                    // var thisKey = form.elements[i].name
+                    // var thisValue = encodeURIComponent(form.elements[i].value)
+
                     switch (form.elements[i].nodeName) {
                         case 'INPUT':
                             switch (form.elements[i].type) {
                                 case 'text':
                                 case 'hidden':
                                 case 'password':
+                                case 'email':
                                 case 'button':
                                 case 'reset':
                                 case 'submit':
                                     q.push(form.elements[i].name + '=' + encodeURIComponent(form.elements[i].value))
+                                    // eslint-disable-next-line
+                                    // q.push({ [form.elements[i].name] : thisValue })
                                     break
                                 case 'checkbox':
                                 case 'radio':
@@ -123,27 +135,35 @@
                 // let data = q.join('&')
                 // eslint-disable-next-line
                 console.log(q)
-                let payload = {
-                    data: q,
-                    formID: 1,
-                    key: 'asdsad3yhsr',
-                    userID: '2364'
+                // eslint-disable-next-line
+                console.log(form.name)
+
+                if (form.name !== '') {
+                    // eslint-disable-next-line
+                    // console.log('no-name')
+                    let payload = {
+                        form_data: q,
+                        form_id: form.name
+                    }
+                    axios({
+                        url: 'http://34.220.186.89/api/forms',
+                        method: 'post',
+                        data: payload,
+                        headers: {
+                            'Access-Control-Allow-Origin': '*'
+                        }
+                    })
+                    .then(function (response) {
+                        // your action after success
+                        // eslint-disable-next-line
+                        console.log(response)
+                    })
+                    .catch(function (error) {
+                        // your action on error success
+                        // eslint-disable-next-line
+                        console.log(error)
+                    })
                 }
-                axios({
-                    url: 'https://jsonplaceholder.typicode.com/posts',
-                    method: 'post',
-                    data: payload
-                })
-                .then(function (response) {
-                    // your action after success
-                    // eslint-disable-next-line
-                    console.log(response)
-                })
-                .catch(function (error) {
-                    // your action on error success
-                    // eslint-disable-next-line
-                    console.log(error)
-                })
             }
         }
     }
