@@ -5,7 +5,7 @@ module.exports = {
         jest: true,
     },
     extends: [
-        'etexperience',
+        'buefy',
     ],
     rules: {
         // disable now, but enable in the future
