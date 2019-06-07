@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div style="margin: 2em;">
     <!-- HTML -->
     HTML input
-    <div>
+    <div style="margin-bottom: 1em;">
       <input type="text" placeholder="first name" name="first_name_personal">
     </div>
     <!-- ET Form -->

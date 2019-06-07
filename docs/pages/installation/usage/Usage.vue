@@ -2,15 +2,15 @@
     <div>
         <h1 class="uk-h1 tm-heading-fragment">Usage</h1>
 
-        <h3 class="subtitle">Basic Concept</h3>
+        <h3 class="subtitle">Basic Concepts</h3>
         <p>The idea behind the ET Form is that it should be easy to implement, since the syntax is almost the same as in HTML.</p>
-        <Example title="  The difference in code syntax" :component="ExDiff" :code="ExDiffCode" vertical/>
+        <Example title="The difference in code syntax" :component="ExDiff" :code="ExDiffCode" vertical docprint/>
         <p>All other supported input types are done in a similar fashion: adding 'et-' in front of the input html element converts it to a field that shall be captured by the ET Form, and data sent to our API.</p>
         <p>Please refer to the documentation for details about other input types.</p>
 
         <h3 class="subtitle">Pages</h3>
         <p>A form with way too many inputs may look scary, therefore we break the questionarre into pages like so:</p>
-        <Example title="Pager example" :component="ExPager" :code="ExPagerCode" vertical/>
+        <Example title="Pager example" :component="ExPager" :code="ExPagerCode" vertical docprint/>
         <!-- <CodeView title="Pager" :code="pager | pre" lang="html" expanded/> -->
         <p>The ET App code automatically adds pages, a pager, depending on your input, forms get it's shape and you can add whatever custom HTML elements to the process of filling the form, for example:</p>
         <div class="uk-margin">
@@ -25,7 +25,7 @@
             </div>
         </div>
         <p>Note that any ET Form must start with <code>&lt;et-form&gt;</code>, end with <code>&lt;&#47;et-form&gt;</code> and contain at least one page wrapper <code>&lt;et-page&gt;&lt;&#47;et-page&gt;</code>:</p>
-        <Example title="Simplest working ET App Form with basic structure" :component="ExSimple" :code="ExSimpleCode" vertical/>
+        <Example title="Simplest working ET App Form with basic structure" :component="ExSimple" :code="ExSimpleCode" vertical docprint/>
         <!-- <CodeView title="Simplest working ET App Form" :code="simple | pre" lang="html" expanded/> -->
         <p>The ET app code automatically switches the pager off, and shows a submit button instead of the 'Next' button.</p>
 
@@ -59,7 +59,7 @@
 
         <h3 class="subtitle">Wrapping it all up</h3>
         <p>After familiarizing ouselves with some basic concepts, let's make an example ET App Form using what we learned.</p>
-        <Example title="Wrapping up our first ET Experience Form example" :component="ExWrapUp" :code="ExWrapUpCode" vertical/>
+        <Example title="Wrapping up our first ET Experience Form example" :component="ExWrapUp" :code="ExWrapUpCode" vertical docprint/>
         <p>As presented here, implementation of the ET Form can be done in less than an hour. Please check the <router-link to="/documentation/customization">Customization</router-link> for more details.</p>
 
     </div>

@@ -1,9 +1,9 @@
 <template>
     <div
         class="codeview"
-        :class="{'expandedView':expandedView}">
+        :class="{'expandedView':expandedView && !expanded}">
         <div
-            class="uk-text-bold
+            class="codeview-title uk-text-bold
             codeview-title uk-text-small uk-padding-small uk-light uk-background-secondary"
             v-if="title">
             {{ title }}
@@ -14,6 +14,7 @@
                 @click="showHideCall">Expand</div> -->
 
             <div
+                v-if="!expanded"
                 class="button-container uk-position-top-left"
                 style="left:10px;top:2px"
                 @click="showHideCall">
@@ -31,9 +32,15 @@
                     Copy
                 </button>
             </div>
-            <div class="overlay"/>
+            <div
+                v-if="!expanded"
+                class="overlay"/>
+            <div
+                v-else
+                class="no-overlay"/>
             <pre
-                class="uk-margin-remove-top code-example"
+                class="uk-margin-remove-top"
+                :class="{'code-example':!expanded}"
                 v-highlight><code :class="lang">{{ code }}</code></pre>
         </figure>
     </div>

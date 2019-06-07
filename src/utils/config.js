@@ -10,7 +10,7 @@ let config = {
     defaultToastPosition: null,
     defaultNotificationDuration: 2000,
     defaultNotificationPosition: null,
-    defaultTooltipType: 'is-primary',
+    defaultTooltipType: 'et-is-primary',
     defaultTooltipAnimated: false,
     defaultInputAutocomplete: 'on',
     defaultDateFormatter: null,

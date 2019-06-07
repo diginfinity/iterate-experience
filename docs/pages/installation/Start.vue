@@ -1,30 +1,8 @@
 <template>
     <div>
         <h1 class="uk-h1 tm-heading-fragment">Installation</h1>
-        <h4>Learn where to download and how to compile/include the ETExperience sources. There are three ways to install and use ETExperience helper library</h4>
-
-        <h3 class="uk-h3 tm-heading-fragment">Icons</h3>
-        <p>Several components uses icons, you might want to add a pack</p>
-
-        <CodeView title="Material Design Icons CDN" :code="materialIcons" expanded/>
-        <CodeView title="Font Awesome 5 CDN" :code="fontAwesome5" expanded/>
-
-        <div class="uk-margin">
-            <div uk-alert>
-                <ul>
-                    <li>Refer to its documentation for latest release / CDN.</li>
-                    <li>Please note that ETExperience doesn't include icon packs. You have to import it as you prefer (NPM, CDN, etc.). - if you plan to use them</li>
-                    <li>If you opted for Font Awesome, you should update your
-                        <router-link to="/documentation/constructor-options">constructor options</router-link>.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="uk-margin">
-            <strong>For any installation and usage method, you need Vue.js version 2.5+.</strong>
-        </div>
-
-        <hr>
+        <h5>Learn where to download and how to compile/include the ETExperience sources.</h5>
+        <p>There are three ways to install and use ETExperience helper library</p>
 
         <h2 class="uk-h2 tm-heading-fragment">1. NPM or Yarn (recommended)</h2>
         <p>After creating a project with vue-cli or custom-made (usually Webpack)</p>
@@ -66,6 +44,29 @@
             Add <a href="https://github.com/diginfinity/nuxt-iterate-experience">nuxt-iterate-experience</a> to modules section of <code>nuxt.config.js</code>:
         </p>
         <CodeView :code="importingNuxtET | pre" lang="javascript" expanded/>
+
+        <hr>
+
+        <h3 class="uk-h3 tm-heading-fragment">Icons</h3>
+        <p>Several components uses icons, you might want to add a pack. Regardless of the three suggested ways of implementation, icons are added with simply linking to the CDN network files.</p>
+
+        <CodeView title="Material Design Icons CDN" :code="materialIcons" expanded/>
+        <CodeView title="Font Awesome 5 CDN" :code="fontAwesome5" expanded/>
+
+        <div class="uk-margin">
+            <div uk-alert>
+                <ul>
+                    <li>Please note that ETExperience doesn't include icon packs. You have to import it as you prefer (NPM, CDN, etc.). - if you plan to use them</li>
+                    <li>Please refer to corresponding documentation for latest release / CDN.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <strong>For any installation and usage method, you need Vue.js version 2.5+.</strong>
+        </div>
+
+
     </div>
 </template>
 

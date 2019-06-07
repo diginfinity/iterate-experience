@@ -10,6 +10,7 @@
     width: 2em
     height: 2em
     border: 1px solid #999999
+    background-color: $backgroundColor
     border-radius: $borderRadius
     &:not(:last-child)
       margin-right: 0.5rem
@@ -26,12 +27,14 @@
   justify-content: space-between
   .et-footer-left,
   .et-footer-right
+    background-color: $backgroundColor
     display: flex
     justify-content: center
     align-items: center
     width: auto
-    min-width: 20%
-    padding: 0.75em
-    // height: 2em
-    border: 1px solid #999999
-    border-radius: $borderRadius
+    .et-footer-button
+      min-width: 20%
+      padding: 0.66em 1.25em
+      // height: 2em
+      border: 1px solid #999999
+      border-radius: $borderRadius

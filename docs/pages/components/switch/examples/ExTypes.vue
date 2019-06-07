@@ -1,53 +1,53 @@
 <template>
     <section>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true">
                 Default
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-info">
                 Info
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-success">
                 Success
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-danger">
                 Danger
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-warning">
                 Warning
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-white">
                 White
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-light">
                 Light
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-dark">
                 Dark
             </et-switch>
         </div>
-        <div class="field">
+        <div class="et-field">
             <et-switch :value="true"
             type="et-is-black">
                 Black

@@ -24,7 +24,7 @@
         <et-field label="Password">
             <et-input type="password"
                      name="password_other"
-                     value="iwantmytreasure"
+                     value="1234"
                      password-reveal>
             </et-input>
         </et-field>

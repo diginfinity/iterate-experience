@@ -60,6 +60,9 @@
         },
         methods: {
             onComplete() {
+                // eslint-disable-next-line
+                console.log(this)
+
                 let form = this.$refs.et_application_form
 
                 if (!form || form.nodeName !== 'FORM') {

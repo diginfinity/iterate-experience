@@ -190,11 +190,13 @@
              * by changing the type and focus the input right away.
              */
             togglePasswordVisibility() {
-                this.isPasswordVisible = !this.isPasswordVisible
-                this.newType = this.isPasswordVisible ? 'text' : 'password'
-                this.$nextTick(() => {
-                    this.$refs.input.focus()
-                })
+                if (this.passwordReveal) {
+                    this.isPasswordVisible = !this.isPasswordVisible
+                    this.newType = this.isPasswordVisible ? 'text' : 'password'
+                    this.$nextTick(() => {
+                        this.$refs.input.focus()
+                    })
+                }
             },
             /**
              * Input's 'input' event listener, 'nextTick' is used to prevent event firing

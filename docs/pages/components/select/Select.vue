@@ -1,16 +1,13 @@
 <template>
     <div>
-        <p class="breadcrumb">Field Customizations</p>
+        <p class="breadcrumb">Select/Option Customizations</p>
         <h1>Select</h1>
 
-        <h4>Basic examples</h4>
-        <Example :component="ExSimple" :code="ExSimpleCode" vertical/>
+        <Example title="Basic examples" :component="ExSimple" :code="ExSimpleCode" vertical docprint addPadding/>
 
-        <h4>Multi-select</h4>
-        <Example :component="ExMultiple" :code="ExMultipleCode" vertical/>
+        <Example title="Multi-select" :component="ExMultiple" :code="ExMultipleCode" vertical docprint addPadding/>
 
-        <h4>Icon select</h4>
-        <Example :component="ExIcons" :code="ExIconsCode" vertical/>
+        <Example title="Icon select" :component="ExIcons" :code="ExIconsCode" vertical docprint addPadding/>
 
         <ApiView :data="api"/>
     </div>

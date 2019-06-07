@@ -1,10 +1,13 @@
 <template>
-    <section class="example-section uk-margin">
-        <p class="uk-h4">{{ title }}</p>
+    <section class="">
+        <h4
+            v-if="docprint"
+            class="code-example-title">{{ title }}
+        </h4>
         <slot/>
         <div uk-margin v-if="component">
-            <div class="uk-padding" style="border: 1px #e5e5e5 solid">
-                <div class="example-component" :class="{ 'is-paddingless': paddingless }">
+            <div :class="{'et-form-border': docprint}">
+                <div class="example-component" :class="{ 'et-add-padding': addPadding }">
                     <component :is="component"/>
                 </div>
             </div>
@@ -26,8 +29,9 @@
             component: [Object, Function],
             code: String,
             title: String,
-            paddingless: Boolean,
-            vertical: Boolean
+            addPadding: Boolean,
+            vertical: Boolean,
+            docprint: Boolean
         }
     }
 </script>

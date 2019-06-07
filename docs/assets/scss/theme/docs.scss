@@ -64,9 +64,9 @@ body { overflow: hidden; }
  * Navbar
  */
 
-.et-navbar-container:not(.uk-navbar-transparent) {
-    background: linear-gradient(to left, #28a5f5, $global-primary-background) !important;
-}
+// .et-navbar-container:not(.uk-navbar-transparent) {
+//     background: linear-gradient(to left, #28a5f5, $global-primary-background);
+// }
 
 .et-navbar-container .uk-navbar-nav > li > a,
 .et-navbar-container .uk-navbar-item:not(.uk-logo),

@@ -5,11 +5,10 @@
         @keyup.right="focusNextTab"
         @keyup.left="focusPrevTab">
 
-        <div class="et-page-navigation">
+        <div v-if="tabCount > 1" class="et-page-navigation">
             <ul
                 class="et-nav"
-                role="tablist"
-                v-if="tabCount > 1">
+                role="tablist">
                 <slot
                     name="step"
                     v-for="(tab, index) in tabs"
@@ -23,9 +22,10 @@
                         :index="index"/>
                 </slot>
             </ul>
-            <div class="et-page-content">
-                <slot v-bind="slotProps"/>
-            </div>
+        </div>
+
+        <div class="et-page-content">
+            <slot v-bind="slotProps"/>
         </div>
 
         <div
@@ -42,11 +42,12 @@
 
         <div class="et-footer et-clearfix">
             <slot name="footer" v-bind="slotProps">
-                <div class="et-footer-left" v-if="displayPrevButton">
+                <div class="et-footer-left et-footer-button" v-if="displayPrevButton">
                     <!-- <slot name="prev" v-bind="slotProps">
                         {{ backButtonText }}
                     </slot> -->
                     <span
+                        class="et-footer-button"
                         @click="prevTab"
                         @keyup.enter="prevTab"
                         role="button"
@@ -57,6 +58,7 @@
 
                 <div class="et-footer-right">
                     <span
+                        class="et-footer-button"
                         @click="nextTab"
                         @keyup.enter="nextTab"
                         role="button"
@@ -65,6 +67,7 @@
                         {{ finishButtonText }}
                     </span>
                     <span
+                        class="et-footer-button"
                         @click="nextTab"
                         @keyup.enter="nextTab"
                         role="button"
@@ -251,6 +254,8 @@
                 return index <= this.maxStep
             },
             nextTab() {
+                // eslint-disable-next-line
+                console.log("next tab")
                 let cb = () => {
                     if (this.activeTabIndex < this.tabCount - 1) {
                         this.changeTab(this.activeTabIndex, this.activeTabIndex + 1)
@@ -300,6 +305,8 @@
                 this.$emit('on-error', error)
             },
             validateBeforeChange(promiseFn, callback) {
+                // eslint-disable-next-line
+                console.log("validate before change")
                 this.setValidationError(null)
                 // we have a promise
                 if (isPromise(promiseFn)) {
@@ -327,6 +334,8 @@
                 }
             },
             beforeTabChange(index, callback) {
+                // eslint-disable-next-line
+                console.log("before tab change")
                 if (this.loading) {
                     return
                 }

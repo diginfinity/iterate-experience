@@ -1,13 +1,11 @@
 <template>
     <div>
-        <p class="breadcrumb">Field Customizations</p>
+        <p class="breadcrumb">Radio Customizations</p>
         <h1>Radio</h1>
 
-        <h4>Basic examples</h4>
-        <Example :component="ExSimple" :code="ExSimpleCode" vertical/>
+        <Example title="Basic examples" :component="ExSimple" :code="ExSimpleCode" vertical docprint addPadding/>
 
-        <h4>Color coded types</h4>
-        <Example :component="ExTypes" :code="ExTypesCode" vertical/>
+        <Example title="Color coded types" :component="ExTypes" :code="ExTypesCode" vertical docprint addPadding/>
 
         <ApiView :data="api"/>
     </div>
