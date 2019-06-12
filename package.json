@@ -1,6 +1,6 @@
 {
   "name": "etexperience",
-  "version": "0.1.0",
+  "version": "0.1.001",
   "homepage": "https://iterate.ai",
   "description": "Lightweight Iterate ET Experience SDK",
   "author": "Andrew Wichern <info@iterate.ai>",
@@ -9,10 +9,9 @@
     "Marko <marko@digitalinfinity.rs>"
   ],
   "license": "MIT",
-  "main": "dist/etsdk.js",
-  "unpkg": "dist/etsdk.min.js",
-  "typings": "types/index.d.ts",
-  "files": [
+  "main": "dist/etexperience.js",
+  "unpkg": "dist/etexperience.min.js",
+    "files": [
     "dist",
     "src",
     "types/*.d.ts"

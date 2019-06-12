@@ -7,7 +7,7 @@
         <!-- Add a page title in plain HTML -->
         <h4>Personal data</h4>
         <et-field label="First name">
-          <et-input v-model="first_name" name="first_name_personal"></et-input>
+          <et-input v-model="first_name" name="first_name_personal" required></et-input>
           <p class="et-input-sub">Please enter your first name</p>
         </et-field>
         <et-field label="Last name">
