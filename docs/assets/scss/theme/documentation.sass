@@ -1,0 +1,110 @@
+// colors
+$primary: #34A7DE
+$secondary: #f27320
+$headerBackground: #f8f8f8
+$footerBackground: #f8f8f8
+
+// color coding fields
+$info: #FCD500
+$success: #008c3c
+$warning: #ffb929
+$danger: #f2355b
+$disabled: #999
+$white: #fff
+$dark: #333
+$light: #ccc
+$hoverTransparency: 0.75
+
+// common styles
+$label: #999
+$textColor: #333
+$backgroundColor: #fff
+$iconColor: #ccc
+$borderRadius: 4px
+$innerShadow: inset 0px 1px 3px rgba(0,0,0,0.125)
+$shadow: 2px 2px 4px rgba(0,0,0,0.33)
+
+// font overrides
+html,
+  font-family: 'metropolisthin'!important
+.uk-navbar-nav > li > a, .uk-navbar-item, .uk-navbar-toggle, .et-sidebar-left
+  font-family: 'metropolissemi_bold'!important
+.et-main p, .et-main li, code
+  font-family: 'metropolismedium'!important
+h1,h2,h3,h4,h5, .et-label
+  font-family: 'metropolislight'!important
+h1
+  font-size: 2.5em!important
+  margin: 0 0 20px 0!important
+h2
+  font-size: 2.0em!important
+  margin: 0 0 20px 0!important
+h3
+  font-size: 1.75rem!important
+  margin: 0 0 15px 0!important
+h4
+  font-size: 1.5rem!important
+  margin: 0 0 10px 0!important
+h5
+  font-size: 1.25rem!important
+  margin: 0 0 10px 0!important
+ul,ol
+  list-style-type: square
+.breadcrumb
+  font-size: 18px
+  color: #bbb
+  display: block
+  border-bottom: 1px solid #ccc
+.expandedView
+  max-height: 125px
+  overflow: hidden
+
+code
+  color: $secondary!important
+  font-size: 1em!important
+.codeview
+  position: relative
+  .code-example
+    padding-top: 45px
+  &:not(.expandedView)
+    .overlay
+      display: none
+  .codeview-title
+    background-color: $secondary
+    color: rgba(255,255,255, 0.85)
+.codeview .overlay
+  background-image: linear-gradient(to top,rgba(255,255,255,0.75),rgba(255,255,255,0.5))
+  background-size: cover
+  position: absolute
+  left: 0
+  top: 25px
+  right: 0
+  bottom: 0
+  max-height: 100px
+.codeview .no-overlay
+  background-color: #eee
+  height: 25px
+.clicktoexpand
+  font-size: 12px
+  cursor: pointer
+  padding: 5px 0 0 5px
+p:last-child
+  margin-bottom: 0
+.uk-active
+  color: #555!important
+.et-navbar-container
+  background-color: rgba(darken($primary,3.85),0.90)!important
+.sidebar-label
+  border-bottom: 1px solid #ddd
+.et-main.uk-section
+  padding-top: 45px
+.code-example-title
+  border-bottom: 5px solid rgba($secondary, 1.0)
+  padding-bottom: 5px
+  margin-bottom: 0!important
+  margin-top: 25px!important
+.et-sidebar-body
+  margin-top: 20px
+.example-component
+  p
+    margin: 0.25em 0 0.25em 0
