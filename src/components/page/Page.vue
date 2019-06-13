@@ -12,8 +12,12 @@
 </template>
 
 <script>
+    // import Toast from '../toast'
     export default{
         name: 'EtPage',
+        // components: {
+        //     [Toast.name]: Toast
+        // },
         props: {
             title: {
                 type: String,
@@ -71,6 +75,13 @@
                     var isValid = this.iterateAllChildren(this.$children, this)
                     if (isValid === false) {
                         reject(new Error('fail'))
+                        // this.$toast.open('Something happened')
+                        this.$toast.open({
+                            duration: 10000,
+                            message: `Please check all the fields, something is not right or missing.`,
+                            position: 'et-is-bottom',
+                            type: 'et-is-danger'
+                        })
                     } else {
                         resolve(true)
                     }
