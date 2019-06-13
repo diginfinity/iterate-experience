@@ -60,10 +60,13 @@
         },
         methods: {
             onComplete() {
-                // eslint-disable-next-line
-                console.log(this)
+                // // eslint-disable-next-line
+                // console.log(this)
 
                 let form = this.$refs.et_application_form
+
+                // eslint-disable-next-line
+                console.log(form)
 
                 if (!form || form.nodeName !== 'FORM') {
                     return
@@ -141,6 +144,8 @@
                 // eslint-disable-next-line
                 console.log(form.name)
 
+                this.clearFormData(form)
+
                 if (form.name !== '') {
                     // eslint-disable-next-line
                     // console.log('no-name')
@@ -151,15 +156,16 @@
                     axios({
                         url: 'http://34.220.186.89/api/forms',
                         method: 'post',
-                        data: payload,
-                        headers: {
-                            'Access-Control-Allow-Origin': '*'
-                        }
+                        data: payload
+                        // headers: {
+                        //     'Access-Control-Allow-Origin': '*'
+                        // }
                     })
                     .then(function (response) {
                         // your action after success
                         // eslint-disable-next-line
                         console.log(response)
+                        this.clearFormData(form)
                     })
                     .catch(function (error) {
                         // your action on error success
@@ -167,6 +173,19 @@
                         console.log(error)
                     })
                 }
+            },
+            clearFormData(form) {
+                /* eslint-disable */
+                form.reset()
+                // let i, j
+                // for (i = form.elements.length - 1; i >= 0; i = i - 1) {
+                //     // if (form.elements[i].name === '') {
+                //     //     continue
+                //     // }
+                //     form.elements[i].value = '' 
+                //     // console.log(form.elements[i])
+                // }
+
             }
         }
     }

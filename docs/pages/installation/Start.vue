@@ -7,7 +7,7 @@
         <h2 class="uk-h2 tm-heading-fragment">1. NPM or Yarn (recommended)</h2>
         <p>After creating a project with vue-cli or custom-made (usually Webpack)</p>
         <h4 class="uk-text-bold">Installation</h4>
-        <CodeView code="npm install iterate-experience" lang="bash" expanded/>
+        <CodeView code="npm install etexperience" lang="bash" expanded/>
 
         <hr>
 
@@ -76,9 +76,9 @@
             return {
                 importingBundle: `
                 import Vue from 'vue'
-                import ETExperience from 'iterate-experience'
-                import 'iterate-experience/dist/etexperience.css'
-                Vue.use(ETExperience)
+                import EtAppForm from 'etexperience'
+                import 'etexperience/dist/etexperience.css'
+                Vue.use(EtAppForm)
                 `,
                 importingComponentsAsVuePlugins: `
                 import Vue from 'vue'
@@ -117,26 +117,24 @@
                 importingCDNHtml: `
                 <!DOCTYPE html>
                 <html>
-                <head>
-                    <meta charset="utf-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="https://unpkg.com/iterate-experience/dist/etexperience.min.css">
-                </head>
-                <body>
-                    <div id="app">
-                        <!-- ETExperience form goes here -->
-                    </div>
-                    <script src="https://unpkg.com/vue"></\script>
-                    <!-- Full bundle -->
-                    <script src="https://unpkg.com/iterate-experience/dist/etexperience.min.js"></\script>
-                    <!-- Individual components -->
-                    <script src="https://unpkg.com/iterate-experience/dist/components/table"></\script>
-                    <script src="https://unpkg.com/iterate-experience/dist/components/input"></\script>
-                    <script>
-                    new Vue({
-                    el: '#app'
-                    })
-                    </\script>
+                    <head>
+                        <meta charset="utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <script src="https://unpkg.com/vue"><\/script>
+                        <link rel="stylesheet" type="text/css" href="./css/etexperience.min.css">
+                        <script type="text/javascript" src="./js/etexperience.min.js"><\/script>
+                        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
+                        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.4.1/css/all.css">
+                    </head>
+                    <body>
+                        <div id="app">
+                            <!-- ETExperience form goes here -->
+                        </div>
+                        <script>
+                            new Vue({
+                            el: '#app'
+                        })
+                        </\script>
                     </body>
                     </html>`,
                     materialIcons: '<link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">',
