@@ -8,27 +8,29 @@
         <h1>ET App Form single page example</h1>
         <h5>If you'd like to work with us, answer the questions below and we'll be in touch.</h5>
 
-        <et-field label="Enter your first name">
-          <et-input
-              v-model="first_name"
-              name="first_name_personal"
-              pattern="[a-zA-Z ]*"
-              maxlength="30"
-              required>
-          </et-input>
-          <p class="et-input-sub">Characters accepted are a-z and space.</p>
-        </et-field>
+        <et-field grouped>
+          <et-field label="Enter your first name" expanded>
+            <et-input
+                v-model="first_name"
+                name="first_name_personal"
+                pattern="[a-zA-Z ]*"
+                maxlength="30"
+                required>
+            </et-input>
+            <p class="et-input-sub">Characters accepted are a-z and space.</p>
+          </et-field>
 
-        <et-field label="Enter your last name">
-          <et-input
-              v-model="last_name"
-              type="text"
-              name="last_name_personal"
-              pattern="[a-zA-Z ]*"
-              maxlength="30"
-              required>
-          </et-input>
-          <p class="et-input-sub">Characters accepted a-z and space.</p>
+          <et-field label="Enter your last name" expanded>
+            <et-input
+                v-model="last_name"
+                type="text"
+                name="last_name_personal"
+                pattern="[a-zA-Z ]*"
+                maxlength="30"
+                required>
+            </et-input>
+            <p class="et-input-sub">Characters accepted a-z and space.</p>
+          </et-field>
         </et-field>
 
         <et-field label="Enter your work email address">
