@@ -9,6 +9,7 @@ import Radio from './radio'
 import Switch from './switch'
 import Checkbox from './checkbox'
 import Table from './table'
+import Toast from './toast'
 
 export {
     Field,
@@ -21,5 +22,6 @@ export {
     Radio,
     Switch,
     Checkbox,
-    Table
+    Table,
+    Toast
 }
