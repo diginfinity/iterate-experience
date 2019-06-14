@@ -11,7 +11,7 @@
   "license": "MIT",
   "main": "dist/etexperience.js",
   "unpkg": "dist/etexperience.min.js",
-    "files": [
+  "files": [
     "dist",
     "src",
     "types/*.d.ts"
