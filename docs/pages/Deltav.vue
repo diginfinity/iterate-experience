@@ -18,7 +18,7 @@
         </nav>
         <div class="uk-background-cover">
             <img src="https://delta.pixelsandcode.studio/wp-content/uploads/2019/01/mountain.jpg" />
-            <div class="uk-container uk-position-center uk-text-center mountainTxt">
+            <div class="uk-container uk-text-center  mountainTxt">
                 <h1>Liquidity Solutions
                     <br>
                     & Growth Equity</h1>
@@ -36,10 +36,10 @@
 
         <footer id="footer">
             <div class="uk-container-medium uk-flex">
-                <div class="uk-padding-small uk-margin-auto">
+                <div id="copyR" class="uk-padding-small uk-margin-auto">
                     <p>© 2019 Delta-vCapital  All Rights Reserved.</p>
                 </div>
-                <div class="uk-padding-small uk-margin-auto">
+                <div id="legalD" class="uk-padding-small uk-margin-auto">
                     <h4>Legal</h4>
                     <div class="legal">
                         <ul id="legal">
@@ -48,22 +48,25 @@
                             <li class="uk-flex-inline uk-link"><a href="#">Privacy Policy</a></li>
                         </ul>
                     </div>
-                    </div>
-                    <div id="social" class="uk-padding-small uk-margin-auto">
-                        <h4>Connect with us</h4>
-                        <ul class="uk-flex ">
-                            <li  id="in" class="uk-flex-inline">
-                                <a href="https://www.linkedin.com/company/iterateai/">
-                                    <i class="fab fa-2x fa-linkedin"/>
-                                </a>
-                            </li>
-                            <li id="tweet" class="uk-flex-inline">
-                                <a href="https://twitter.com/iterateai">
-                                    <i class="fab fa-2x fa-twitter"/>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                </div>
+                <div id="social" class="uk-padding-small uk-margin-auto">
+                    <h4>Connect with us</h4>
+                    <ul class="uk-flex ">
+                        <li  id="in" class="uk-flex-inline">
+                            <a href="https://www.linkedin.com/company/iterateai/">
+                                <i class="fab fa-2x fa-linkedin"/>
+                            </a>
+                        </li>
+                        <li id="tweet" class="uk-flex-inline">
+                            <a href="https://twitter.com/iterateai">
+                                <i class="fab fa-2x fa-twitter"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="footerLogo" class="uk-padding-small uk-margin-auto">
+                    <img src="https://delta.pixelsandcode.studio/wp-content/uploads/2019/02/Delta-vCapital_triangles_border.png">
+                </div>
             </div>
         </footer>
     </div>
@@ -164,7 +167,10 @@
     .mountainTxt{
         color:white;
         font-family: Raleway, Helvetica, Arial, Lucida, sans-serif;
-
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
     }
     .mountainTxt h1{
@@ -172,7 +178,22 @@
         font-weight: bold;
     }
     .mountainTxt p{
-        font-size: 27.795px
+        font-size: 27.795px;
+
+    }
+    #footerLogo{
+        width: 300px;
+        height: 200px;
+        opacity: 0.1;
+    }
+    #social{
+        margin-top:40px;
+    }
+    #legalD{
+        margin-top:60px;
+    }
+    #copyR{
+        margin-top: 100px;
     }
 
 
