@@ -153,6 +153,10 @@
                         form_data: q,
                         form_id: form.name
                     }
+                    const isFullPage = true
+                    const loadingComponent = this.$loading.open({
+                        container: isFullPage ? null : this.$refs.element.$el
+                    })
                     axios({
                         url: 'http://34.220.186.89/api/forms',
                         method: 'post',
@@ -166,11 +170,13 @@
                         // eslint-disable-next-line
                         console.log(response)
                         this.clearFormData(form)
+                        setTimeout(() => loadingComponent.close(), 500)
                     })
                     .catch(function (error) {
                         // your action on error success
                         // eslint-disable-next-line
                         console.log(error)
+                        setTimeout(() => loadingComponent.close(), 500)
                     })
                 }
             },

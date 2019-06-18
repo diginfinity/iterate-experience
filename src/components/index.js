@@ -10,6 +10,7 @@ import Switch from './switch'
 import Checkbox from './checkbox'
 import Table from './table'
 import Toast from './toast'
+import Loading from './loading'
 
 export {
     Field,
@@ -23,5 +24,6 @@ export {
     Switch,
     Checkbox,
     Table,
-    Toast
+    Toast,
+    Loading
 }

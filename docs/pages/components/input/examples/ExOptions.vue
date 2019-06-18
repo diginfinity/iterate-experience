@@ -24,6 +24,18 @@
             <p class="et-input-sub">Characters accepted are a-z and space.</p>
         </et-field>
 
+        <h4>Input URL</h4>
+        <p>Allow URL type input field</p>
+        <et-field label="Enter your website address">
+            <et-input
+                name="email_contact"
+                type="url"
+                maxlength="30"
+                required>
+            </et-input>
+            <p class="et-input-sub">Please add a URL, including the <code>http://</code> or <code>https://</code> at the beginning.</p>
+        </et-field>
+
     </section>
 </template>
 

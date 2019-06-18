@@ -1,0 +1,69 @@
+.et-loading-overlay
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    align-items: center
+    display: none
+    justify-content: center
+    overflow: hidden
+.et-loading-overlay.et-is-full-page
+    z-index: 999
+    position: fixed
+
+.et-loading-overlay.et-is-active
+    display: flex
+
+.et-loading-overlay .loading-background
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    background: rgb(127, 127, 127)
+    background: rgba(255, 255, 255, 0.75)
+
+.et-loading-overlay .loading-icon
+    position: relative
+
+
+
+
+.et-loading-overlay.et-is-full-page .loading-icon::after
+    top: calc(50% - 2.5em)
+    left: calc(50% - 2.5em)
+    width: 5em
+    height: 5em
+
+.et-loading-overlay .loading-icon::after
+    animation: spinAround .5s infinite linear
+    animation-name: spinAround
+    animation-duration: 0.5s
+    animation-timing-function: linear
+    animation-delay: 0s
+    animation-iteration-count: infinite
+    animation-direction: normal
+    animation-fill-mode: none
+    animation-play-state: running
+    border: 2px solid rgb(219, 219, 219)
+    border-radius: 800px
+    border-right-color: transparent
+    border-top-color: transparent
+    content: ""
+    display: block
+    height: 1em
+    position: relative
+    width: 1em
+    position: absolute
+    top: calc(50% - 1.5em)
+    left: calc(50% - 1.5em)
+    width: 3em
+    height: 3em
+    border-width: .25em
+
+@keyframes spinAround
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(359deg)
