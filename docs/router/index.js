@@ -25,9 +25,6 @@ const router = new Router({
     base: __dirname,
     routes: [
         route('/', 'Home'),
-        route('/jockey', 'Jockey'),
-        route('/stout', 'Stout'),
-        route('/deltav', 'Deltav'),
         {
             path: '/',
             component: Documentation,
