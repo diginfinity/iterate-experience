@@ -1,0 +1,81 @@
+.et-modal-background
+    background-color: rgba(10, 10, 10, 0.86)
+
+.et-modal.et-is-active
+    display: flex
+
+.et-is-overlay, .et-modal, .et-modal-background
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+
+.et-modal
+    align-items: center
+    display: none
+    flex-direction: column
+    justify-content: center
+    overflow: hidden
+    position: fixed
+    z-index: 40
+
+.et-modal .et-animation-content
+    margin: 0 20px
+
+.et-dialog .et-modal-card
+    min-width: 320px
+
+.et-dialog .et-modal-card
+    max-width: 460px
+    width: auto
+
+.et-modal-card
+    display: flex
+    flex-direction: column
+    max-height: calc(100vh - 40px)
+    overflow: hidden
+    position: relative
+
+.et-dialog .et-modal-card .et-modal-card-head
+    font-size: 1.25rem
+    font-weight: 600
+
+.et-modal-card-head
+    border-bottom: 1px solid rgb(219, 219, 219)
+    border-top-left-radius: 6px
+    border-top-right-radius: 6px
+
+.et-modal-card-foot, .et-modal-card-head
+    align-items: center
+    background-color: rgb(245, 245, 245)
+    display: flex
+    flex-shrink: 0
+    justify-content: flex-start
+    padding: 20px
+    position: relative
+
+.et-modal-card-body
+    -webkit-overflow-scrolling: touch
+    background-color: rgb(255, 255, 255)
+    flex-grow: 1
+    flex-shrink: 1
+    overflow: auto
+    padding: 20px
+
+.et-dialog .et-modal-card .et-modal-card-foot
+    justify-content: flex-end
+
+.et-modal-card-foot 
+    border-bottom-left-radius: 6px
+    border-bottom-right-radius: 6px
+    border-top: 1px solid rgb(219, 219, 219)
+
+.et-modal-card-foot, .et-modal-card-head
+    align-items: center
+    background-color: rgb(245, 245, 245)
+    display: flex
+    flex-shrink: 0
+    justify-content: flex-start
+    padding: 20px
+    position: relative

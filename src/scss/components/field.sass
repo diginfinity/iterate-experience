@@ -18,9 +18,20 @@
 .et-field.et-is-grouped .et-field.et-is-expanded
     flex-grow: 1
     flex-shrink: 1
+    flex: 1
 
 .et-field.et-is-grouped .et-field:not(:last-child)
     margin-right: 1.0rem
 
 .et-field.is-grouped .et-field
     flex-shrink: 0
+
+.et-field.et-is-grouped
+  display: flex
+  justify-content: flex-start
+
+@media(max-width: 800px)
+  .et-field.et-is-grouped
+    display: block
+  .et-field.et-is-grouped .et-field:not(:last-child)
+    margin-right: 0

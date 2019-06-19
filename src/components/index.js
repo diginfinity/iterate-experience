@@ -11,6 +11,8 @@ import Checkbox from './checkbox'
 import Table from './table'
 import Toast from './toast'
 import Loading from './loading'
+import Modal from './modal'
+import Dialog from './dialog'
 
 export {
     Field,
@@ -25,5 +27,7 @@ export {
     Checkbox,
     Table,
     Toast,
-    Loading
+    Loading,
+    Modal,
+    Dialog
 }

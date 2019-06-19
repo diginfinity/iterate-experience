@@ -157,6 +157,7 @@
                     const loadingComponent = this.$loading.open({
                         container: isFullPage ? null : this.$refs.element.$el
                     })
+                    const thisOne = this
                     axios({
                         url: 'http://34.220.186.89/api/forms',
                         method: 'post',
@@ -169,14 +170,26 @@
                         // your action after success
                         // eslint-disable-next-line
                         console.log(response)
-                        this.clearFormData(form)
-                        setTimeout(() => loadingComponent.close(), 500)
+                        thisOne.clearFormData(form)
+                        thisOne.$dialog.alert({
+                            title: 'Thank you!',
+                            message: 'Your data has been sucessfully submitted.',
+                            confirmText: 'Close'
+                        })
+                        loadingComponent.close()
+                        // setTimeout(() => loadingComponent.close(), 500)
                     })
                     .catch(function (error) {
                         // your action on error success
                         // eslint-disable-next-line
                         console.log(error)
-                        setTimeout(() => loadingComponent.close(), 500)
+                        thisOne.$dialog.alert({
+                            title: 'Error',
+                            message: 'Your data has not been submitted. Please try again later.',
+                            confirmText: 'Close'
+                        })
+                        loadingComponent.close()
+                        // setTimeout(() => loadingComponent.close(), 500)
                     })
                 }
             },

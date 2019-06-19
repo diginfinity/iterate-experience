@@ -1,6 +1,6 @@
 <template>
     <div class="et-numberinput et-field" :class="fieldClasses">
-        <p class="et-control">
+        <!-- <p class="et-control">
             <button
                 type="button"
                 class="et-button"
@@ -18,7 +18,7 @@
                     :pack="iconPack"
                     :size="iconSize" />
             </button>
-        </p>
+        </p> -->
 
         <et-input
             type="number"
@@ -35,9 +35,10 @@
             :autocomplete="autocomplete"
             :expanded="expanded"
             @focus="$emit('focus', $event)"
-            @blur="$emit('blur', $event)" />
+            @blur="$emit('blur', $event)"
+        />
 
-        <p class="et-control">
+        <!-- <p class="et-control">
             <button
                 type="button"
                 class="et-button"
@@ -55,7 +56,7 @@
                     :pack="iconPack"
                     :size="iconSize" />
             </button>
-        </p>
+        </p> -->
     </div>
 </template>
 

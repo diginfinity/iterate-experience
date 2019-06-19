@@ -72,6 +72,28 @@
             },
             beforeChange() {
                 return new Promise((resolve, reject) => {
+                    // const isFullPage = true
+                    // const loadingComponent = this.$loading.open({
+                    //     container: isFullPage ? null : this.$refs.element.$el
+                    // })
+                    // setTimeout(() => loadingComponent.close(), 10 * 1000)
+
+                    // this.$dialog.alert({
+                    //     title: 'Thank you!',
+                    //     message: 'Your data has been sucessfully submitted.',
+                    //     confirmText: 'Close'
+                    // })
+
+                    // this.$dialog.alert({
+                    //     title: 'Error',
+                    //     message: 'Something\'s not good but I
+                    //      have a custom <b>icon</b> and <b>type</b>',
+                    //     type: 'et-is-danger',
+                    //     hasIcon: true,
+                    //     icon: 'times-circle',
+                    //     iconPack: 'fa'
+                    // })
+
                     var isValid = this.iterateAllChildren(this.$children, this)
                     if (isValid === false) {
                         reject(new Error('fail'))

@@ -5,6 +5,9 @@
 ::before
   box-sizing: inherit
 
+  // html
+  //   position: relative
+  
 .et-button, .et-file-cta, .et-file-name, .et-input, .et-pagination-ellipsis, .et-pagination-link, .et-pagination-next, .et-pagination-previous, .et-select select, .et-taginput .et-taginput-container.is-focusable, .et-textarea
   -moz-appearance: none
   -webkit-appearance: none
@@ -80,9 +83,6 @@ fieldset[disabled] .radio,
   color: $disabled
   cursor: not-allowed
 
-.et-field.et-is-grouped
-  display: flex
-  justify-content: flex-start
 .et-input-sub
   font-size: 0.75rem
   margin-top: 0.5em
@@ -207,7 +207,21 @@ $snackbar-color: $white !default
   &.has-custom-container
     position: absolute
 
+
   // @include mobile
   //   padding: 0
   //   position: fixed !important
 
+.et-is-clipped
+    overflow: hidden !important
+
+.et-media
+    align-items: flex-start
+    display: flex
+    text-align: left
+.et-media-left
+    margin-right: 1rem
+.et-media-left, .et-media-right
+    flex-basis: auto
+    flex-grow: 0
+    flex-shrink: 0
