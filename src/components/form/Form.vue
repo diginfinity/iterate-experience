@@ -66,7 +66,7 @@
                 let form = this.$refs.et_application_form
 
                 // eslint-disable-next-line
-                console.log(form)
+                // console.log(form)
 
                 if (!form || form.nodeName !== 'FORM') {
                     return
@@ -75,7 +75,8 @@
                 let i,
                     j,
                     q = []
-                for (i = form.elements.length - 1; i >= 0; i = i - 1) {
+                // for (i = form.elements.length - 1; i >= 0; i = i - 1) {
+                for (i = 0; i < form.elements.length; i = i + 1) {
                     if (form.elements[i].name === '') {
                         continue
                     }
@@ -85,7 +86,7 @@
                     // var thisValue = encodeURIComponent(form.elements[i].value)
 
                     // eslint-disable-next-line
-                    console.log('item name', form.elements[i].nodeName)
+                    // console.log('item name', form.elements[i].nodeName)
 
                     switch (form.elements[i].nodeName) {
                         case 'INPUT':
@@ -96,6 +97,7 @@
                                 case 'email':
                                 case 'button':
                                 case 'reset':
+                                case 'url':
                                 case 'submit':
                                     q.push(form.elements[i].name + '=' + encodeURIComponent(form.elements[i].value))
                                     // eslint-disable-next-line
@@ -116,9 +118,9 @@
                             break
                         case 'SELECT':
                             // eslint-disable-next-line
-                            console.log("select")
+                            // console.log("select")
                             // eslint-disable-next-line
-                            console.log("option type:", form.elements[i].type)
+                            // console.log("option type:", form.elements[i].type)
                             switch (form.elements[i].type) {
                                 case 'select-one':
                                     q.push(form.elements[i].name + '=' + encodeURIComponent(form.elements[i].value))
@@ -147,9 +149,9 @@
                 }
                 // let data = q.join('&')
                 // eslint-disable-next-line
-                console.log(q)
+                // console.log(q)
                 // eslint-disable-next-line
-                console.log(form.name)
+                // console.log(form.name)
 
                 this.clearFormData(form)
 
@@ -173,7 +175,7 @@
                     .then(function (response) {
                         // your action after success
                         // eslint-disable-next-line
-                        console.log(response)
+                        // console.log(response)
                         thisOne.clearFormData(form)
                         thisOne.$dialog.alert({
                             title: 'Thank you!',

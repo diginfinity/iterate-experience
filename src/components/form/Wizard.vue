@@ -255,7 +255,7 @@
             },
             nextTab() {
                 // eslint-disable-next-line
-                console.log("next tab")
+                // console.log("next tab")
                 let cb = () => {
                     if (this.activeTabIndex < this.tabCount - 1) {
                         this.changeTab(this.activeTabIndex, this.activeTabIndex + 1)
@@ -306,7 +306,7 @@
             },
             validateBeforeChange(promiseFn, callback) {
                 // eslint-disable-next-line
-                console.log("validate before change")
+                // console.log("validate before change")
                 this.setValidationError(null)
                 // we have a promise
                 if (isPromise(promiseFn)) {
@@ -335,7 +335,7 @@
             },
             beforeTabChange(index, callback) {
                 // eslint-disable-next-line
-                console.log("before tab change")
+                // console.log("before tab change")
                 if (this.loading) {
                     return
                 }

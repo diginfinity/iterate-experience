@@ -133,9 +133,9 @@ export default {
                     'rediffmail.com', 'mindspring.com', 'comcast.com', 'charter.net', 'outlook.com', 'rediff.com', 'yahoo.co.in'
                 ];
 
-                console.log(this.newValue)
+                // console.log(this.newValue)
                 var domain_name = this.newValue.split("@")[1];
-                console.log(domain_name)
+                // console.log(domain_name)
                 if (new RegExp(invalid_email.join("|")).test(domain_name) === true) {
                     type = 'et-is-danger'
                     message = "No public email addresses are accepted!"
