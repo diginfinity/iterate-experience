@@ -11,13 +11,31 @@
             :maxlength="maxlength"
             :value="computedValue"
             v-bind="$attrs"
-            @input="onInput"
+            @input="onInput($event);onKeyUp($event)"
             @blur="onBlur"
             @focus="onFocus">
+        <div
+            class="dropdown-menu"
+            v-if="newType !== 'textarea' && name==='company_name_business'"
+        >
+            <div
+                v-if="autocompleteArray.length > 0 && autocompleteShow===true"
+                class="dropdown-content"
+            >
+                <div
+                    v-for="(item) in autocompleteArray"
+                    class="dropdown-item"
+                    @click="onAutocompleteSelect(item.label)"
+                    :key="item.id"
+                >
+                    {{ item.label }}
+                </div>
+            </div>
+        </div>
 
         <textarea
             :name="name"
-            v-else
+            v-if="type === 'textarea'"
             ref="textarea"
             class="et-textarea"
             :class="[inputClasses, customClass]"
@@ -60,6 +78,8 @@
     import config from '../../utils/config'
     import FormElementMixin from '../../utils/FormElementMixin'
     import RequiredProps from '../../utils/RequiredProps'
+    import axios from 'axios'
+    const qs = require('querystring')
 
     export default {
         name: 'EtInput',
@@ -91,6 +111,10 @@
                 newType: this.type,
                 newAutocomplete: this.autocomplete || config.defaultInputAutocomplete,
                 isPasswordVisible: false,
+                isFocused: false,
+                lastKnownInput: '',
+                autocompleteArray: [],
+                autocompleteShow: false,
                 _elementRef: this.type === 'textarea'
                     ? 'textarea'
                     : 'input'
@@ -103,6 +127,7 @@
                 },
                 set(value) {
                     this.newValue = value
+                    // this.newType = type
                     this.$emit('input', value)
                     !this.isValid && this.checkHtml5Validity()
                 }
@@ -208,6 +233,128 @@
                         this.computedValue = event.target.value
                     }
                 })
+            },
+            onAutocompleteSelect(item) {
+                // eslint-disable-next-line
+                console.log("clicks:", item)
+                this.computedValue = item
+                this.autocompleteShow = false
+                this.autocompleteArray = [] // clear autocomplete array
+                // show please wait
+
+                // axios({
+                //     url: 'https://angular.iterate.ai/users/get_startup_logo',
+                //     method: 'post',
+                //     data: qs.stringify({
+                //         startup_name: 'IBM',
+                //         startup_type: 'STARTUP'
+                //     }),
+                //     config: {
+                //         headers: {
+                //             'Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+                //             // 'X-Requested-With': 'XMLHttpRequest',
+                //             'Accept': '*/*',
+                //             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                //             // 'X-Requested-With': 'XMLHttpRequest'
+                //             // 'Cache-Control': 'no-cache'
+                //             // 'Connection': 'keep-alive'
+                //         },
+                //         'X-Requested-With': 'XMLHttpRequest'
+                //     }
+                // })
+
+                var data = qs.stringify({
+                    startup_name: 'IBM',
+                    startup_type: 'STARTUP'
+                })
+
+                // axios.defaults.headers.post['X-Requested-With'] = 'XMLHttpRequest'
+                axios.post(
+                    'https://angular.iterate.ai/users/get_startup_logo',
+                    data,
+                    {
+                        headers: {
+                            // 'Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+                            // 'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
+                            // 'X-Requested-With': 'XMLHttpRequest',
+                            // Accept: '*/*',
+                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                            // [X-Requested-With]: 'XMLHttpRequest'
+                        }
+                    }
+                )
+                .then(function (response) {
+                    // eslint-disable-next-line
+                    console.log("data line:", response)
+                    // your action after success
+                    // if (thisOne.lastKnownInput === event.target.value) {
+                    //     // eslint-disable-next-line
+                    //     // console.log("data match", response)
+                    //     thisOne.autocompleteArray = []
+                    //     response.data.forEach((entry) => {
+                    //         // tab.checked = false
+                    //         // // eslint-disable-next-line
+                    //         // console.log("data line:", entry)
+                    //         thisOne.autocompleteArray.push(entry)
+                    //     })
+                    //     // eslint-disable-next-line
+                    //     thisOne.autocompleteShow = true
+                    //     // console.log("data array:", thisOne.autocompleteArray)
+                    // } else {
+                    //     thisOne.autocompleteArray = []
+                    //     thisOne.autocompleteShow = false
+                    // }
+                })
+                .catch(function (error) {
+                    // eslint-disable-next-line
+                    console.log(error.response)
+                })
+
+                // lock fields
+            },
+            onBlur() {
+                setTimeout(() => {
+                    this.autocompleteShow = false
+                }, 250)
+            },
+            onKeyUp(event) {
+                // if (event.target.name === 'company_name_business') {
+                //     this.lastKnownInput = event.target.value
+                //     // eslint-disable-next-line
+                //     console.log("burek:", event.target.value)
+                //     // // eslint-disable-next-line
+                //     // console.log("burek:", event.target.name)
+                //     var thisOne = this
+                //     axios({
+                //         url: 'https://angular.iterate.ai/ajaxs/get_organization/1?term=' + event.target.value,
+                //         method: 'get'
+                //     })
+                //     .then(function (response) {
+                //         // your action after success
+                //         if (thisOne.lastKnownInput === event.target.value) {
+                //             // eslint-disable-next-line
+                //             // console.log(response.headers['set-cookie']);
+                //             // console.log("data match", response)
+                //             thisOne.autocompleteArray = []
+                //             response.data.forEach((entry) => {
+                //                 // tab.checked = false
+                //                 // // eslint-disable-next-line
+                //                 // console.log("data line:", entry)
+                //                 thisOne.autocompleteArray.push(entry)
+                //             })
+                //             // eslint-disable-next-line
+                //             thisOne.autocompleteShow = true
+                //             // console.log("data array:", thisOne.autocompleteArray)
+                //         } else {
+                //             thisOne.autocompleteArray = []
+                //             thisOne.autocompleteShow = false
+                //         }
+                //     })
+                //     .catch(function (error) {
+                //         // eslint-disable-next-line
+                //         console.log(error.response)
+                //     })
+                // }
             }
         }
     }

@@ -1,25 +1,5 @@
 <template>
     <div class="et-numberinput et-field" :class="fieldClasses">
-        <!-- <p class="et-control">
-            <button
-                type="button"
-                class="et-button"
-                :class="buttonClasses"
-                :disabled="disabled || disabledMin"
-                @mousedown="onStartLongPress($event, false)"
-                @mouseup="onStopLongPress(false)"
-                @mouseleave="onStopLongPress(false)"
-                @touchstart.prevent="onStartLongPress($event, false)"
-                @touchend="onStopLongPress(false)"
-                @touchcancel="onStopLongPress(false)"
-                @click="onControlClick($event, false)" >
-                <et-icon
-                    icon="minus"
-                    :pack="iconPack"
-                    :size="iconSize" />
-            </button>
-        </p> -->
-
         <et-input
             type="number"
             ref="input"
@@ -37,26 +17,6 @@
             @focus="$emit('focus', $event)"
             @blur="$emit('blur', $event)"
         />
-
-        <!-- <p class="et-control">
-            <button
-                type="button"
-                class="et-button"
-                :class="buttonClasses"
-                :disabled="disabled || disabledMax"
-                @mousedown="onStartLongPress($event, true)"
-                @mouseup="onStopLongPress(true)"
-                @mouseleave="onStopLongPress(true)"
-                @touchstart.prevent="onStartLongPress($event, true)"
-                @touchend="onStopLongPress(true)"
-                @touchcancel="onStopLongPress(true)"
-                @click="onControlClick($event, true)" >
-                <et-icon
-                    icon="plus"
-                    :pack="iconPack"
-                    :size="iconSize" />
-            </button>
-        </p> -->
     </div>
 </template>
 

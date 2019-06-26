@@ -1,3 +1,4 @@
+/* eslint-disable */
 import config from '../utils/config'
 
 export default {
@@ -68,11 +69,14 @@ export default {
          */
         iconSize() {
             switch (this.size) {
-                case 'is-small': return this.size
-                case 'is-medium': return
-                case 'is-large': return this.newIconPack === 'mdi'
-                    ? 'is-medium'
-                    : ''
+                case 'is-small':
+                    return this.size
+                case 'is-medium':
+                    return
+                case 'is-large':
+                    return this.newIconPack === 'mdi' ?
+                        'is-medium' :
+                        ''
             }
         }
     },
@@ -119,6 +123,24 @@ export default {
                 type = 'et-is-danger'
                 message = el.validationMessage
                 isValid = false
+            }
+            // console.log("html5 val", this.$data)
+            // reject public emails
+            // if (this.type === 'email' && !checkMailProviderValidity(this.newValue)) {
+            if (this.type === 'email' && isValid === true) {
+                var invalid_email = ['gmail.com', 'aol.com', 'yahoo.com', 'comcast.net', 'hotmail.com', 'msn.com', 'rocketmail.com', 'att.net', 'sbcglobal.net', 'ymail.com',
+                    'facebook.com', 'mail.com', 'bellsouth.net', 'live.com', 'earthlink.net', 'cox.net', 'prodigy.net', 'me.com', 'eoplepc.com', 'juno.com',
+                    'rediffmail.com', 'mindspring.com', 'comcast.com', 'charter.net', 'outlook.com', 'rediff.com', 'yahoo.co.in'
+                ];
+
+                console.log(this.newValue)
+                var domain_name = this.newValue.split("@")[1];
+                console.log(domain_name)
+                if (new RegExp(invalid_email.join("|")).test(domain_name) === true) {
+                    type = 'et-is-danger'
+                    message = "No public email addresses are accepted!"
+                    isValid = false
+                }
             }
             this.isValid = isValid
 

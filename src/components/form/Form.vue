@@ -84,6 +84,9 @@
                     // var thisKey = form.elements[i].name
                     // var thisValue = encodeURIComponent(form.elements[i].value)
 
+                    // eslint-disable-next-line
+                    console.log('item name', form.elements[i].nodeName)
+
                     switch (form.elements[i].nodeName) {
                         case 'INPUT':
                             switch (form.elements[i].type) {
@@ -112,6 +115,10 @@
                             q.push(form.elements[i].name + '=' + encodeURIComponent(form.elements[i].value))
                             break
                         case 'SELECT':
+                            // eslint-disable-next-line
+                            console.log("select")
+                            // eslint-disable-next-line
+                            console.log("option type:", form.elements[i].type)
                             switch (form.elements[i].type) {
                                 case 'select-one':
                                     q.push(form.elements[i].name + '=' + encodeURIComponent(form.elements[i].value))
@@ -162,9 +169,6 @@
                         url: 'http://34.220.186.89/api/forms',
                         method: 'post',
                         data: payload
-                        // headers: {
-                        //     'Access-Control-Allow-Origin': '*'
-                        // }
                     })
                     .then(function (response) {
                         // your action after success

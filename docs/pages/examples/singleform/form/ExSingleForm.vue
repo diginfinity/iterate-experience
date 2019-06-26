@@ -1,17 +1,28 @@
 <template>
   <div>
     <!-- init the ET Form -->
-    <et-form name="6"> <!-- the form name is the form ID -->
+    <et-form name=""> <!-- the form name is the form ID -->
       <!-- first page -->
       <et-page>
         <!-- Add a page title in plain HTML if any -->
         <h1>ET App Form single page example</h1>
         <h5>If you'd like to work with us, answer the questions below and we'll be in touch.</h5>
 
+
+        <!-- <et-field label="Enter your work email address">
+          <et-autocomplete
+              rounded
+              :data="filteredDataArray"
+              placeholder="e.g. jQuery"
+              icon="magnify"
+              @select="option => selected = option">
+              <template slot="empty">No results found</template>
+          </et-autocomplete>
+        </et-field> -->
+
         <et-field grouped>
           <et-field label="Enter your first name" expanded>
             <et-input
-                v-model="first_name"
                 name="first_name_personal"
                 pattern="[a-zA-Z ]*"
                 maxlength="30"
@@ -22,7 +33,6 @@
 
           <et-field label="Enter your last name" expanded>
             <et-input
-                v-model="last_name"
                 type="text"
                 name="last_name_personal"
                 pattern="[a-zA-Z ]*"
@@ -38,7 +48,6 @@
             type="email"
             value=""
             name="email_business"
-            v-model="email_business"
             required
             maxlength="60">
           </et-input>
@@ -47,7 +56,6 @@
 
         <et-field label="Company name">
             <et-input
-                v-model="company_name"
                 name="company_name_business"
                 required
                 maxlength="60">
@@ -55,13 +63,59 @@
             <p class="et-input-sub">Enter your company name</p>
         </et-field>
 
+        <et-field label="I'm interested in..." expanded>
+            <et-select
+              placeholder="Please select area of interest"
+              name="interested_in_business"
+              required
+              expanded
+            >
+                <option value="Explore - General">
+                    Explore - General
+                </option>
+                <option value="Signals POVs">
+                    Signals® POVs
+                </option>
+                <option value="Opportunity Landscapes">
+                    Opportunity Landscapes
+                </option>
+                <option value="Tours of the Possible">
+                    Tours of the Possible
+                </option>
+                <option value="Evaluate - General">
+                    Evaluate - General
+                </option>
+                <option value="Curation &amp; Diligence">
+                    Curation &amp; Diligence
+                </option>
+                <option value="Technology Sourcing &amp; Optimization">
+                    Technology Sourcing &amp; Optimization
+                </option>
+                <option value="Digital Immersion">
+                    Digital Immersion
+                </option>
+                <option value="Execute - General">
+                    Execute - General
+                </option>
+                <option value="Prototype Sprints">
+                    Prototype Sprints
+                </option>
+                <option value="Interplay Essentials">
+                    Interplay Essentials
+                </option>
+                <option value="The Innovation Cloud">
+                    The Innovation Cloud
+                </option>
+            </et-select>
+        </et-field>
+
         <et-field label="Company Url">
-            <et-input v-model="company_url" name="company_url_business"></et-input>
+            <et-input name="company_url_business"></et-input>
             <p class="et-input-sub">Enter your official website (with http:// or https://)</p>
         </et-field>
 
         <et-field label="Job title">
-            <et-input v-model="job_title" name="job_title_business">
+            <et-input name="job_title_business">
             </et-input>
             <p class="et-input-sub">Please enter your job title.</p>
         </et-field>
@@ -70,7 +124,6 @@
             <et-input
                 type="textarea"
                 max-length="1000"
-                v-model="company_description"
                 name="company_description_business"
                 maxlength="1000"
                 required>
@@ -88,14 +141,32 @@
   export default {
     data() {
       return {
-        first_name: '',
-        last_name:'',
-        email_business: '',
-        company_name: '',
-        company_url: '',
-        job_title: '',
-        company_description: ''
+        data: [
+            'Angular',
+            'Angular 2',
+            'Aurelia',
+            'Backbone',
+            'Ember',
+            'jQuery',
+            'Meteor',
+            'Node.js',
+            'Polymer',
+            'React',
+            'RxJS',
+            'Vue.js'
+        ],
+        name: ''
       }
+    },
+    computed: {
+        filteredDataArray() {
+            return this.data.filter((option) => {
+                return option
+                    .toString()
+                    .toLowerCase()
+                    .indexOf(this.name.toLowerCase()) >= 0
+            })
+        }
     }
   }
 </script>

@@ -31,7 +31,7 @@
       <et-page>
         <h4>Contact data</h4>
         <et-field label="Email">
-          <et-input v-model="email" name="email_contact"></et-input>
+          <et-input v-model="email" type="email" name="email_contact" required></et-input>
           <p class="et-input-sub">Business email contact address with which we can reach you related to this subject</p>
         </et-field>
         <et-field label="Phone">

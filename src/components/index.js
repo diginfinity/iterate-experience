@@ -13,6 +13,7 @@ import Toast from './toast'
 import Loading from './loading'
 import Modal from './modal'
 import Dialog from './dialog'
+import Autocomplete from './autocomplete'
 
 export {
     Field,
@@ -29,5 +30,6 @@ export {
     Toast,
     Loading,
     Modal,
-    Dialog
+    Dialog,
+    Autocomplete
 }
